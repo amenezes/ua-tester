@@ -8,10 +8,10 @@ Dependencies:
  - Bundler: http://bundler.io
 
 Installation:
- # bundle install
+- bundle install
 
 Usage:
-$ ruby ua-tester.rb -u \<target_url\>
+- ruby ua-tester.rb -u \<target_url\>
 
 Directories:
  - /bin:
