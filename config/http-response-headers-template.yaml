@@ -1,0 +1,57 @@
+##
+# UA-Tester
+# 
+# Copyright (C) 2015 - 2015 - BSecTeam
+#  
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 2 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+##
+---
+Server:
+ description: 'The name of target server.'
+X-Powered-By:
+ description: 'Technology supported by web application.'
+X-Frame-Options:
+ description: 'Clickjacking protection: "deny" - no rendering within a frame, "sameorigin" - no rendering if origin mismatch.'
+X-XSS-Protection:
+ description: 'Cross-site scripting (XSS) filter.'
+X-Content-Type-Options:
+ description: 'The only defined value, "nosniff", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type. This also applies to Google Chrome, when downloading extensions.'
+X-UA-Compatible:
+ description: 'Recommends the preferred rendering engine (often a backward-compatibility mode) to use to display the content. Also used to activate Chrome Frame in Internet Explorer.'
+Allow:
+ description: 'Valid actions for a specified resource. To be used for a 405 Method not allowed.'
+Age:
+ description: 'The age the object has been in a proxy cache in seconds.'
+Content-Encoding:
+ description: 'The type of encoding used on the data. See HTTP compression.'
+Content-Language:
+ description: 'The language the content is in.'
+Content-Type:
+ description: 'The MIME type of this content'
+P3P:
+ description: 'This header is supposed to set P3P policy. However, P3P did not take off, most browsers have never fully implemented it, a lot of websites set this header with fake policy text, that was enough to fool browsers the existence of P3P policy and grant permissions for third party cookies.'
+Pragma:
+ description: 'Implementation-specific headers that may have various effects anywhere along the request-response chain.'
+Set-Cookie:
+ description: 'An HTTP cookie'
+Strict-Transport-Security:
+ description: 'A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains.'
+Via:
+ description: 'Informs the client of proxies through which the response was sent.'
+Warning:
+ description: 'A general warning about possible problems with the entity body.'
+WWW-Authenticate:
+ description: 'Indicates the authentication scheme that should be used to access the requested entity.'
+# references: 
+#  1. List of HTTP header fields <http://en.wikipedia.org/wiki/List_of_HTTP_header_fields>

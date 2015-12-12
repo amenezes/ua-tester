@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class GenericRequest - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>generic_request.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-build_request">#build_request</a>
+    
+    <li ><a href="#method-i-config_http_header">#config_http_header</a>
+    
+    <li ><a href="#method-i-uri">#uri</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./config/http-header-template_yaml.html">http-header-template.yaml</a>
+  
+    <li class="file"><a href="./doc/CMDPrint_html.html">CMDPrint.html</a>
+  
+    <li class="file"><a href="./doc/GenericRequest_html.html">GenericRequest.html</a>
+  
+    <li class="file"><a href="./doc/HTTPRequest_html.html">HTTPRequest.html</a>
+  
+    <li class="file"><a href="./doc/HTTPSRequest_html.html">HTTPSRequest.html</a>
+  
+    <li class="file"><a href="./doc/Scan_html.html">Scan.html</a>
+  
+    <li class="file"><a href="./doc/UATester_html.html">UATester.html</a>
+  
+    <li class="file"><a href="./doc/Utils_html.html">Utils.html</a>
+  
+    <li class="file"><a href="./doc/config/http-header-template_yaml_html.html">http-header-template_yaml.html</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="./doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="./doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="./doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="./doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="./doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="./doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="./doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="./doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="./doc/signatures/snort-ua_yaml_html.html">snort-ua_yaml.html</a>
+  
+    <li class="file"><a href="./doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="./signatures/snort-ua_yaml.html">snort-ua.yaml</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./CMDPrint.html">CMDPrint</a>
+  
+    <li><a href="./GenericRequest.html">GenericRequest</a>
+  
+    <li><a href="./HTTPRequest.html">HTTPRequest</a>
+  
+    <li><a href="./HTTPSRequest.html">HTTPSRequest</a>
+  
+    <li><a href="./Scan.html">Scan</a>
+  
+    <li><a href="./UATester.html">UATester</a>
+  
+    <li><a href="./Utils.html">Utils</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class GenericRequest</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="DEFAULT_BROWSER">DEFAULT_BROWSER
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-req" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">req</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(browser_template=DEFAULT_BROWSER)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File generic_request.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">browser_template</span>=<span class="ruby-constant">DEFAULT_BROWSER</span>)
+        <span class="ruby-comment">#@http_request = HTTPRequest.new</span>
+        <span class="ruby-comment">#@https_request = HTTPSRequest.new</span>
+                
+        <span class="ruby-ivar">@http_header_fields</span> = <span class="ruby-identifier">config_http_header</span> <span class="ruby-identifier">browser_template</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-build_request" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">build_request</span><span
+            class="method-args">(uri, ua_string)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="build_request-source">
+            <pre><span class="ruby-comment"># File generic_request.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">build_request</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">ua_string</span>)
+        <span class="ruby-keyword">begin</span>
+                <span class="ruby-ivar">@http_request</span>.<span class="ruby-identifier">req</span>[<span class="ruby-string">&#39;User-Agent&#39;</span>] = <span class="ruby-identifier">ua_string</span>
+                <span class="ruby-ivar">@http_header_fields</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+                        <span class="ruby-ivar">@http_request</span>.<span class="ruby-identifier">req</span>.<span class="ruby-identifier">add_field</span> <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">res</span> = <span class="ruby-ivar">@http_request</span>.<span class="ruby-identifier">send_request</span>
+                <span class="ruby-keyword">case</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">code</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;200&quot;</span>
+                        <span class="ruby-constant">CMDPrint</span>.<span class="ruby-identifier">print_good</span>(<span class="ruby-identifier">ua_string</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;404&quot;</span>
+                        <span class="ruby-constant">CMDPrint</span>.<span class="ruby-identifier">print_error</span>(<span class="ruby-identifier">ua_string</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;301&quot;</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;&gt;&gt; redirect&quot;</span>
+                        <span class="ruby-ivar">@http_request</span>.<span class="ruby-identifier">request_uri</span> <span class="ruby-identifier">res</span>[<span class="ruby-string">&#39;Location&#39;</span>]
+                        <span class="ruby-identifier">res</span> = <span class="ruby-ivar">@http_request</span>.<span class="ruby-identifier">send_request</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;res.code =&gt; #{res.code}&quot;</span>
+                <span class="ruby-keyword">end</span> 
+
+                <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">ReadTimeout</span>
+                        <span class="ruby-identifier">res</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTPNotFound</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-value">404</span>, <span class="ruby-keyword">nil</span>)
+                        <span class="ruby-constant">CMDPrint</span>.<span class="ruby-identifier">print_error</span>(<span class="ruby-identifier">ua_string</span>)
+                <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>
+                        <span class="ruby-identifier">res</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTPNotFound</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-value">404</span>, <span class="ruby-keyword">nil</span>)
+                        <span class="ruby-constant">CMDPrint</span>.<span class="ruby-identifier">print_error</span>(<span class="ruby-identifier">ua_string</span>)
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- build_request-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- build_request-method -->
+
+    
+      <div id="method-i-config_http_header" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">config_http_header</span><span
+            class="method-args">(browser_template)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="config_http_header-source">
+            <pre><span class="ruby-comment"># File generic_request.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">config_http_header</span>(<span class="ruby-identifier">browser_template</span>)
+        <span class="ruby-identifier">http_header</span> = {}
+        <span class="ruby-identifier">http_fields</span> = <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_file</span>(<span class="ruby-string">&#39;config/http-header-template.yaml&#39;</span>)
+        <span class="ruby-identifier">http_fields</span>[<span class="ruby-identifier">browser_template</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">http_header</span>.<span class="ruby-identifier">store</span>(<span class="ruby-node">&quot;#{key}&quot;</span>, <span class="ruby-node">&quot;#{value}&quot;</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">http_header</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- config_http_header-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- config_http_header-method -->
+
+    
+      <div id="method-i-uri" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">uri</span><span
+            class="method-args">(uri)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="uri-source">
+            <pre><span class="ruby-comment"># File generic_request.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">uri</span>(<span class="ruby-identifier">uri</span>)
+        <span class="ruby-ivar">@http_request</span> = <span class="ruby-constant">HTTPRequest</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">uri</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- uri-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- uri-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

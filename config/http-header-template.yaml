@@ -1,0 +1,34 @@
+##
+# UA-Tester
+# 
+# Copyright (C) 2015 - 2015 - BSecTeam
+#  
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 2 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+##
+---
+firefox:
+ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,
+ Accept-Language: pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3,
+ Accept-Encoding: gzip, deflate,
+ Connection: keep-alive
+safari:
+ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,
+ Accept-Language: pt-br,
+ Accept-Encoding: gzip, deflate,
+ Connection: keep-alive
+chrome:
+ Accept: text/css,*/*;q=0.1,
+ Accept-Language: en-US,en;q=0.8,
+ Accept-Encoding: gzip, deflate,sdch,
+ Connection: keep-alive

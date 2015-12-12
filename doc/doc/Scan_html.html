@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>Scan.html - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../config/http-header-template_yaml.html">http-header-template.yaml</a>
+  
+    <li class="file"><a href="../doc/CMDPrint_html.html">CMDPrint.html</a>
+  
+    <li class="file"><a href="../doc/GenericRequest_html.html">GenericRequest.html</a>
+  
+    <li class="file"><a href="../doc/HTTPRequest_html.html">HTTPRequest.html</a>
+  
+    <li class="file"><a href="../doc/HTTPSRequest_html.html">HTTPSRequest.html</a>
+  
+    <li class="file"><a href="../doc/Scan_html.html">Scan.html</a>
+  
+    <li class="file"><a href="../doc/UATester_html.html">UATester.html</a>
+  
+    <li class="file"><a href="../doc/Utils_html.html">Utils.html</a>
+  
+    <li class="file"><a href="../doc/config/http-header-template_yaml_html.html">http-header-template_yaml.html</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../doc/signatures/snort-ua_yaml_html.html">snort-ua_yaml.html</a>
+  
+    <li class="file"><a href="../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../signatures/snort-ua_yaml.html">snort-ua.yaml</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../CMDPrint.html">CMDPrint</a>
+  
+    <li><a href="../GenericRequest.html">GenericRequest</a>
+  
+    <li><a href="../HTTPRequest.html">HTTPRequest</a>
+  
+    <li><a href="../HTTPSRequest.html">HTTPSRequest</a>
+  
+    <li><a href="../Scan.html">Scan</a>
+  
+    <li><a href="../UATester.html">UATester</a>
+  
+    <li><a href="../Utils.html">Utils</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>&lt;!DOCTYPE html&gt;</p>
+
+<p>&lt;html&gt; &lt;head&gt; &lt;meta content=“text/html; charset=UTF-8”
+http-equiv=“Content-Type”&gt;</p>
+
+<p>&lt;title&gt;class <a href="../Scan.html">Scan</a> - RDoc
+Documentation&lt;/title&gt;</p>
+
+<p>&lt;link type=“text/css” media=“screen” href=“./rdoc.css”
+rel=“stylesheet”&gt;</p>
+
+<p>&lt;script type=“text/javascript”&gt;</p>
+
+<pre>var rdoc_rel_prefix = &quot;./&quot;;</pre>
+
+<p>&lt;/script&gt;</p>
+
+<p>&lt;script type=“text/javascript” charset=“utf-8”
+src=“./js/jquery.js”&gt;&lt;/script&gt; &lt;script type=“text/javascript”
+charset=“utf-8” src=“./js/navigation.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/search_index.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/search.js”&gt;&lt;/script&gt; &lt;script type=“text/javascript”
+charset=“utf-8” src=“./js/searcher.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/darkfish.js”&gt;&lt;/script&gt;</p>
+
+<p>&lt;body id=“top” class=“class”&gt; &lt;nav id=“metadata”&gt;</p>
+
+<pre>&lt;nav id=&quot;home-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;
+  &lt;a href=&quot;./index.html&quot;&gt;Home&lt;/a&gt;
+  &lt;a href=&quot;./table_of_contents.html#classes&quot;&gt;Classes&lt;/a&gt;
+  &lt;a href=&quot;./table_of_contents.html#methods&quot;&gt;Methods&lt;/a&gt;
+&lt;/h3&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;nav id=&quot;search-section&quot; class=&quot;section project-section&quot; class=&quot;initially-hidden&quot;&gt;
+&lt;form action=&quot;#&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;
+  &lt;h3 class=&quot;section-header&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;search&quot; placeholder=&quot;Search&quot; id=&quot;search-field&quot;
+           title=&quot;Type to search, Up and Down to navigate, Enter to load&quot;&gt;
+  &lt;/h3&gt;
+&lt;/form&gt;
+
+&lt;ul id=&quot;search-results&quot; class=&quot;initially-hidden&quot;&gt;&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;div id=&quot;file-metadata&quot;&gt;
+  &lt;nav id=&quot;file-list-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Defined In&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;scan.rb
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;
+
+&lt;div id=&quot;class-metadata&quot;&gt;
+
+  &lt;nav id=&quot;parent-class-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Parent&lt;/h3&gt;
+
+&lt;p class=&quot;link&quot;&gt;Object</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;!-- Method Quickref --&gt;</pre>
+
+<p>&lt;nav id=“method-list-section” class=“section”&gt;</p>
+
+<pre>&lt;h3 class=&quot;section-header&quot;&gt;Methods&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-c-new&quot;&gt;::new&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-start_scan&quot;&gt;#start_scan&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;
+
+&lt;div id=&quot;project-metadata&quot;&gt;
+  &lt;nav id=&quot;fileindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Pages&lt;/h3&gt;
+
+&lt;ul&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./config/http-header-template_yaml.html&quot;&gt;http-header-template.yaml&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./doc/created_rid.html&quot;&gt;created.rid&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./signatures/snort-ua_yaml.html&quot;&gt;snort-ua.yaml&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>  &lt;nav id=&quot;classindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Class and Module Index&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./CMDPrint.html&quot;&gt;CMDPrint&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./GenericRequest.html&quot;&gt;GenericRequest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./HTTPRequest.html&quot;&gt;HTTPRequest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./HTTPSRequest.html&quot;&gt;HTTPSRequest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Scan.html&quot;&gt;Scan&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./UATester.html&quot;&gt;UATester&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Utils.html&quot;&gt;Utils&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<p>&lt;div id=“documentation”&gt;</p>
+
+<pre class="ruby"><span class="ruby-operator">&lt;</span><span class="ruby-identifier">h1</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;class&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">class</span> <span class="ruby-constant">Scan</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/h1&gt;
+
+&lt;div id=&quot;description&quot; class=&quot;description&quot;&gt;
+
+&lt;/</span><span class="ruby-identifier">div</span><span class="ruby-operator">&gt;</span><span class="ruby-operator">&lt;</span><span class="ruby-operator">!</span><span class="ruby-operator">-</span><span class="ruby-operator">-</span> <span class="ruby-identifier">description</span> <span class="ruby-operator">-</span><span class="ruby-operator">-</span><span class="ruby-operator">&gt;</span>
+
+<span class="ruby-operator">&lt;</span><span class="ruby-identifier">section</span> <span class="ruby-identifier">id</span>=<span class="ruby-string">&quot;5Buntitled-5D&quot;</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;documentation-section&quot;</span><span class="ruby-operator">&gt;</span>
+
+  <span class="ruby-operator">&lt;</span><span class="ruby-operator">!</span><span class="ruby-operator">-</span><span class="ruby-operator">-</span> <span class="ruby-constant">Constants</span> <span class="ruby-operator">-</span><span class="ruby-operator">-</span><span class="ruby-operator">&gt;</span>
+  <span class="ruby-operator">&lt;</span><span class="ruby-identifier">section</span> <span class="ruby-identifier">id</span>=<span class="ruby-string">&quot;constants-list&quot;</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;section&quot;</span><span class="ruby-operator">&gt;</span>
+    <span class="ruby-operator">&lt;</span><span class="ruby-identifier">h3</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;section-header&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Constants</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/h3&gt;
+    &lt;dl&gt;
+
+      &lt;dt id=&quot;BASE_URL&quot;&gt;BASE_URL
+
+      &lt;dd class=&quot;description&quot;&gt;
+
+    &lt;/</span><span class="ruby-identifier">dl</span><span class="ruby-operator">&gt;</span>
+  <span class="ruby-operator">&lt;</span><span class="ruby-regexp">/section&gt;
+
+  &lt;!-- Methods --&gt;
+
+   &lt;section id=&quot;public-class-5Buntitled-5D-method-details&quot; class=&quot;method-section section&quot;&gt;
+    &lt;h3 class=&quot;section-header&quot;&gt;Public Class Methods&lt;/</span><span class="ruby-identifier">h3</span><span class="ruby-operator">&gt;</span>
+
+    <span class="ruby-operator">&lt;</span><span class="ruby-identifier">div</span> <span class="ruby-identifier">id</span>=<span class="ruby-string">&quot;method-c-new&quot;</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;method-detail &quot;</span><span class="ruby-operator">&gt;</span>
+
+      <span class="ruby-operator">&lt;</span><span class="ruby-identifier">div</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;method-heading&quot;</span><span class="ruby-operator">&gt;</span>
+        <span class="ruby-operator">&lt;</span><span class="ruby-identifier">span</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;method-name&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">new</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/span&gt;&lt;span
+          class=&quot;method-args&quot;&gt;()&lt;/</span><span class="ruby-identifier">pan</span><span class="ruby-operator">&gt;</span>
+
+        <span class="ruby-operator">&lt;</span><span class="ruby-identifier">span</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;method-click-advice&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">click</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">toggle</span> <span class="ruby-identifier">source</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/span&gt;
+
+      &lt;/</span><span class="ruby-identifier">div</span><span class="ruby-operator">&gt;</span>
+
+      <span class="ruby-operator">&lt;</span><span class="ruby-identifier">div</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;method-description&quot;</span><span class="ruby-operator">&gt;</span>
+
+        <span class="ruby-operator">&lt;</span><span class="ruby-identifier">div</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;method-source-code&quot;</span> <span class="ruby-identifier">id</span>=<span class="ruby-string">&quot;new-source&quot;</span><span class="ruby-operator">&gt;</span>
+          <span class="ruby-operator">&lt;</span><span class="ruby-identifier">pre</span><span class="ruby-operator">&gt;</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">span</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;ruby-comment&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-comment"># File scan.rb, line 11&lt;/span&gt;</span>
+</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;initialize&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-ivar&quot;&gt;@generic_request&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;GenericRequest&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;ruby-ivar&quot;&gt;@utils&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;Utils&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;ruby-ivar&quot;&gt;@files&lt;/span&gt; = &lt;span class=&quot;ruby-ivar&quot;&gt;@utils&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;load_signatures_files&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>      &lt;/div&gt;&lt;!-- new-source --&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;&lt;!-- new-method --&gt;
+
+&lt;/section&gt;&lt;!-- public-class-method-details --&gt;
+
+ &lt;section id=&quot;public-instance-5Buntitled-5D-method-details&quot; class=&quot;method-section section&quot;&gt;
+  &lt;h3 class=&quot;section-header&quot;&gt;Public Instance Methods&lt;/h3&gt;
+
+  &lt;div id=&quot;method-i-start_scan&quot; class=&quot;method-detail &quot;&gt;
+
+    &lt;div class=&quot;method-heading&quot;&gt;
+      &lt;span class=&quot;method-name&quot;&gt;start_scan&lt;/span&gt;&lt;span
+        class=&quot;method-args&quot;&gt;(url=&quot;&lt;/span&gt;
+
+      &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class=&quot;method-description&quot;&gt;
+
+      &lt;div class=&quot;method-source-code&quot; id=&quot;start_scan-source&quot;&gt;
+        &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File scan.rb, line 17&lt;/span&gt;
+    &lt;span class=&quot;ruby-keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;start_scan&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;url&lt;/span&gt;=&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;#{BASE_URL}&amp;quot;&lt;/span&gt;)
+            &lt;span class=&quot;ruby-keyword&quot;&gt;begin&lt;/span&gt;
+                    &lt;span class=&quot;ruby-identifier&quot;&gt;uri&lt;/span&gt; = &lt;span class=&quot;ruby-ivar&quot;&gt;@utils&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;normalize&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;url&lt;/span&gt;
+                    &lt;span class=&quot;ruby-ivar&quot;&gt;@generic_request&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;uri&lt;/span&gt;
+
+                    &lt;span class=&quot;ruby-ivar&quot;&gt;@files&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;
+                            &lt;span class=&quot;ruby-identifier&quot;&gt;signature_file&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;YAML&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;load_file&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;file&lt;/span&gt;
+                            &lt;span class=&quot;ruby-identifier&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;---&amp;quot;&lt;/span&gt;
+                            &lt;span class=&quot;ruby-identifier&quot;&gt;signature_file&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;each_key&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;ua_class&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;
+                                    &lt;span class=&quot;ruby-constant&quot;&gt;CMDPrint&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;print_info&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;ua_class&lt;/span&gt;)
+                                    &lt;span class=&quot;ruby-comment&quot;&gt;#puts &amp;quot;[*] category: #{ua_class}&amp;quot;  &lt;/span&gt;
+                                    &lt;span class=&quot;ruby-identifier&quot;&gt;signature_file&lt;/span&gt;[&lt;span class=&quot;ruby-identifier&quot;&gt;ua_class&lt;/span&gt;].&lt;span class=&quot;ruby-identifier&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;ua_value&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;
+                                            &lt;span class=&quot;ruby-identifier&quot;&gt;res&lt;/span&gt; = &lt;span class=&quot;ruby-ivar&quot;&gt;@generic_request&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;build_request&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;uri&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;ua_value&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-comment”&gt;#                                         
+case res.code&lt;/span&gt; &lt;span class=“ruby-comment”&gt;#              
+when &amp;quot;200&amp;quot;&lt;/span&gt; &lt;span
+class=“ruby-comment”&gt;#                                                  
+<a
+href="../CMDPrint.html#method-c-print_good">CMDPrint.print_good</a>&lt;/span&gt;
+&lt;span class=“ruby-comment”&gt;#                                         
+when &amp;quot;404&amp;quot;&lt;/span&gt; &lt;span
+class=“ruby-comment”&gt;#                                                  
+<a
+href="../CMDPrint.html#method-c-print_error">CMDPrint.print_error</a>&lt;/span&gt;
+&lt;span class=“ruby-comment”&gt;#                                         
+when &amp;quot;301&amp;quot;&lt;/span&gt; &lt;span
+class=“ruby-comment”&gt;#                                                  
+puts &amp;quot;&amp;gt;&amp;gt; redirect&amp;quot;&lt;/span&gt; &lt;span
+class=“ruby-comment”&gt;#                                                  
+puts <a href="http://&#39;Location&#39;">res</a>&lt;/span&gt; &lt;span
+class=“ruby-comment”&gt;# ajustar requisicao&lt;/span&gt; &lt;span
+class=“ruby-comment”&gt;#                                                  
+res = @<a
+href="http://&#39;Location&#39;">generic_request.build_request(res</a>,
+ua_value)&lt;/span&gt; &lt;span class=“ruby-comment”&gt;#                  
+res = @<a
+href="http://&#39;Location&#39;">generic_request.uri(res</a>)&lt;/span&gt;
+&lt;span class=“ruby-comment”&gt;#                                         
+if res.code == &amp;quot;200&amp;quot;&lt;/span&gt; &lt;span
+class=“ruby-comment”&gt;#                                                  
+<a
+href="../CMDPrint.html#method-c-print_good">CMDPrint.print_good</a>&lt;/span&gt;
+&lt;span class=“ruby-comment”&gt;#                                         
+end&lt;/span&gt; &lt;span class=“ruby-comment”&gt;#                        
+end&lt;/span&gt;</p>
+
+<pre>                                      &lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;        
+                              &lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+                              &lt;span class=&quot;ruby-identifier&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;---&amp;quot;&lt;/span&gt;
+                      &lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+              &lt;span class=&quot;ruby-keyword&quot;&gt;rescue&lt;/span&gt; 
+                      &lt;span class=&quot;ruby-identifier&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;$!&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;$@&lt;/span&gt;
+                      &lt;span class=&quot;ruby-identifier&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;fatal error&amp;quot;&lt;/span&gt;
+              &lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+      &lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;
+        &lt;/div&gt;&lt;!-- start_scan-source --&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;&lt;!-- start_scan-method --&gt;
+
+  &lt;/section&gt;&lt;!-- public-instance-method-details --&gt;
+
+&lt;/section&gt;&lt;!-- 5Buntitled-5D --&gt;</pre>
+
+<p>&lt;/div&gt;&lt;!– documentation –&gt;</p>
+
+<p>&lt;footer id=“validator-badges”&gt;</p>
+
+<pre>&lt;p&gt;&lt;a href=&quot;http://validator.w3.org/check/referer&quot;&gt;[Validate]&lt;/a&gt;
+&lt;p&gt;Generated by &lt;a href=&quot;https://github.com/rdoc/rdoc&quot;&gt;RDoc&lt;/a&gt; 4.0.0.
+&lt;p&gt;Generated with the &lt;a href=&quot;http://deveiate.org/projects/Darkfish-Rdoc/&quot;&gt;Darkfish Rdoc Generator&lt;/a&gt; 3.</pre>
+
+<p>&lt;/footer&gt;</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
