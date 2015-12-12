@@ -1,13 +1,13 @@
 ##
 # UA-Tester
-# 
+#
 # Copyright (C) 2015 - 2015 - BSecTeam
-#  
+#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 2 of the License, or
 # (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -38,7 +38,7 @@ class HttpRequest
 		@http_request.get uri
 		@http_request.request_headers = @http_header_fields
 		@http_request.read_timeout = 5
-		
+
 		if uri.port == 443
 			@http_request.verify_mode = OpenSSL::SSL::VERIFY_NONE
 		end
@@ -47,7 +47,7 @@ class HttpRequest
 	def proxy(addr, port)
 		@http_request.set_proxy addr, port
 	end
-	
+
 	def config_http_header(browser_template)
 		http_header = {}
 		http_fields = YAML.load_file(HTTP_HEADER_CONFIG_FILE)
@@ -63,24 +63,22 @@ class HttpRequest
 			res = @http_request.get uri
 			case res.code
 			when "200"
-				#CMDPrint.print_good("#{ua_string} - #{res.code}")
 				CMDPrint.print_good("#{ua_string}")
 			when "404","403"
-				#CMDPrint.print_error("#{ua_string} - #{res.code}")
 				CMDPrint.print_error("#{ua_string}")
 			end
 		rescue Net::ReadTimeout
 			res = Net::HTTPNotFound.new(nil, 404, nil)
-			CMDPrint.print_error("#{ua_string} - blocked!")
+			CMDPrint.print_error("#{ua_string}")
 		rescue Timeout::Error
 			res = Net::HTTPNotFound.new(nil, 404, nil)
-			CMDPrint.print_error("#{ua_string} - blocked!")
+			CMDPrint.print_error("#{ua_string}")
 		rescue Errno::ETIMEDOUT
 			res = Net::HTTPNotFound.new(nil, 404, nil)
-			CMDPrint.print_error("#{ua_string} - blocked!")
+			CMDPrint.print_error("#{ua_string}")
 		rescue Net::HTTP::Persistent::Error
 			res = Net::HTTPNotFound.new(nil, 404, nil)
-			CMDPrint.print_error("#{ua_string} - blocked!")
+			CMDPrint.print_error("#{ua_string}")
 		end
-	end	
+	end
 end
