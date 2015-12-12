@@ -13,13 +13,9 @@ Installation:
 Usage:
 - ruby ua-tester.rb -u \<target_url\>
 
-Directories:
- - /bin:
- - /config:
- - /doc:
- - /signatures:
-
 Contact:
  - e-mail:
  - gpg: 
  - twitter:
+
+More on wiki...
