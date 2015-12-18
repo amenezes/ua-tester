@@ -17,6 +17,9 @@ Usage:
 Module to Assist Management of Signature Files \<to newbie :P\>:
 - uactl \<option\>
 
+An alternative way is to simply rename the file extension for '.yaml', for example:
+ - 'cms_joomla.txt' to 'cms_joomla.yaml'
+
 Contact:
  - e-mail: alexandre.fmenezes@gmail.com
  - twitter: @ale_menezes
