@@ -1,20 +1,17 @@
 ##
 # UA-Tester
-# 
+#
 # Copyright (C) 2015 - 2015 - BSecTeam
-#  
+#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 2 of the License, or
 # (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# GNU General Public Licens
 ##
 
 #!/usr/bin/ruby
@@ -30,7 +27,7 @@ class UATester
 	def initialize
 		@scan = Scan.new
 	end
-	
+
 	def print_banner
 		puts "> User-Agent Tester [ua-tester.rb]"
 		CMDPrint.print_version "version: #{VERSION}"
@@ -49,25 +46,25 @@ class UATester
 				@options[:proxy] = p
 				@scan.use_proxy(true, @options[:proxy])
 			end
-		
+
 			opt.on("-u TARGET", "--url TARGET", "URL target to scan. Default it's <localhost>") do |op|
 				@options[:url] = op
 				@scan.start_scan @options[:url]
 			end
-			
+
 			opt.on("-o", "--output", "Set a <FILE> to output result scan") do |o|
 			end
-			
+
 			opt.on("-b", "--browser", "Set a browser template for HTTP header, options are: [firefox, safari and chrome]") do |b|
 				@options[:browser] = b
 			end
-			
+
 			opt.on("-h", "--help", "Print this help message") do |h|
 				puts optparser
 				exit
 			end
 		end
-		optparser.parse! 
+		optparser.parse!
 		mandatory = [:url]
 		missing = mandatory.select{ |param| @options[param].nil? }
 		unless missing.empty?
