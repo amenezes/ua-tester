@@ -24,7 +24,8 @@ class UACtl
   VERSION="0.1"
 
   def list
-    files = Dir.glob("#{Dir.pwd}/signatures/*.{yaml,txt}")
+    files = get_signature_files
+
     CMDPrint.print_info "valid files to <ua-tester.rb> are"
     files.each do |file|
       CMDPrint.print_good File.basename file
@@ -34,32 +35,18 @@ class UACtl
   def disable_all
     CMDPrint.print_info "disabled all signature files..."
 
-    files = Dir.glob("#{Dir.pwd}/signatures/*.{yaml,txt}")
-    files.each do |file|
-      if (File.extname file).end_with?".yaml"
-        File.rename(
-          "signatures/#{File.basename(file)}",
-          "signatures/#{File.basename(file, ".yaml").concat(".txt")}"
-        )
-      end
-    end
+    rename_signature_files ".yaml", ".txt"
   end
 
   def enable_all
     CMDPrint.print_info "enabled all signature files..."
 
-    files = Dir.glob("#{Dir.pwd}/signatures/*.{yaml,txt}")
-    files.each do |file|
-      if (File.extname file).end_with?".txt"
-        File.rename(
-          "signatures/#{File.basename(file)}",
-          "signatures/#{File.basename(file, ".txt").concat(".yaml")}"
-        )
-      end
-    end
+    rename_signature_files ".txt", ".yaml"
+
   end
 
-  def enable_sig file
+  def enable_signature_file file
+    CMDPrint.print_info "signature files below are enabled..."
   end
 
   def print_banner
@@ -92,6 +79,7 @@ class UACtl
 
 			opt.on("-e", "--enable <FILE_NAME>", "Enable a unique file.") do |e|
 				#@options[:en_signature_file] = e
+        self.enable_signature_file e
 			end
 
 			opt.on("-h", "--help", "Print this help message") do |h|
@@ -112,6 +100,36 @@ class UACtl
 			exit 1
 		end
 	end
+
+  private
+
+  # default base directory to make a list is:
+  # => signatures/
+  #
+  # see method:
+  # => get_signature_files
+  def rename_signature_files(fbase_extension, fdest_extension, files=get_signature_files)
+    files.each do |file|
+      if (File.extname file).end_with?"#{fbase_extension}"
+        File.rename(
+          "signatures/#{File.basename(file)}",
+          "signatures/#{File.basename(file,
+            "#{fbase_extension}")
+            .concat("#{fdest_extension}")}"
+        )
+      end
+    end
+  end
+
+  # default directory to search files is:
+  # => signature/
+  #
+  # default extensions to analsis are:
+  # => yaml - enabled signature files
+  # => txt - disabled signature files
+  def get_signature_files
+    Dir.glob("#{Dir.pwd}/signatures/*.{yaml,txt}")
+  end
 
 end
 
