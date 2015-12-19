@@ -15,7 +15,7 @@ Usage:
 - ruby ua-tester.rb -u \<target_url\>
 
 Module to Assist Management of Signature Files \<to newbie :P\>:
-- uactl \<option\>
+- ruby uactl \<option\>
 
 An alternative way is to simply rename the file extension for '.yaml', for example:
  - 'cms_joomla.txt' to 'cms_joomla.yaml'
