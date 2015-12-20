@@ -21,7 +21,7 @@ require_relative 'cmd_print'
 
 class UACtl
 
-  VERSION="0.1"
+  VERSION="0.2"
 
   def list
     files = get_signature_files
@@ -46,7 +46,28 @@ class UACtl
   end
 
   def enable_signature_file file
-    CMDPrint.print_info "signature files below are enabled..."
+    CMDPrint.print_info "All signature files now are enabled."
+
+    test_file file, ".yaml"
+
+    rename_signature_files(".txt",
+      ".yaml",
+      get_signature_files(
+        "#{Dir.pwd}/signatures/#{file}*.{yaml,txt}"
+      )
+    )
+  end
+
+  def disable_signature_file file
+    CMDPrint.print_info "All signature files now are disabled."
+
+    test_file file, ".txt"
+    rename_signature_files(".yaml",
+      ".txt",
+      get_signature_files(
+        "#{Dir.pwd}/signatures/#{file}*.{yaml,txt}"
+      )
+    )
   end
 
   def print_banner
@@ -78,8 +99,11 @@ class UACtl
 			end
 
 			opt.on("-e", "--enable <FILE_NAME>", "Enable a unique file.") do |e|
-				#@options[:en_signature_file] = e
         self.enable_signature_file e
+			end
+
+      opt.on("-r", "--disable <FILE_NAME>", "Disable a unique file.") do |r|
+        self.disable_signature_file r
 			end
 
 			opt.on("-h", "--help", "Print this help message") do |h|
@@ -103,11 +127,6 @@ class UACtl
 
   private
 
-  # default base directory to make a list is:
-  # => signatures/
-  #
-  # see method:
-  # => get_signature_files
   def rename_signature_files(fbase_extension, fdest_extension, files=get_signature_files)
     files.each do |file|
       if (File.extname file).end_with?"#{fbase_extension}"
@@ -121,14 +140,20 @@ class UACtl
     end
   end
 
-  # default directory to search files is:
-  # => signature/
-  #
-  # default extensions to analsis are:
-  # => yaml - enabled signature files
-  # => txt - disabled signature files
-  def get_signature_files
-    Dir.glob("#{Dir.pwd}/signatures/*.{yaml,txt}")
+  def get_signature_files(
+    signature_directory="#{Dir.pwd}/signatures/*.{yaml,txt}"
+  )
+    Dir.glob(signature_directory)
+  end
+
+  def test_file file, extension
+    if ((File.extname file) == extension)
+      CMDPrint.print_info "seems that are nothing to do with signature file set <#{file}>."
+      exit
+    elsif File.exist?File.expand_path file + extension, "signatures"
+      CMDPrint.print_info "signature specify already enabled or disabled!"
+      exit
+    end
   end
 
 end
