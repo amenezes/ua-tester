@@ -67,17 +67,7 @@ class HttpRequest
 			when "404","403"
 				CMDPrint.print_error("#{ua_string}")
 			end
-		rescue Net::ReadTimeout
-			res = Net::HTTPNotFound.new(nil, 404, nil)
-			CMDPrint.print_error("#{ua_string}")
-		rescue Timeout::Error
-			res = Net::HTTPNotFound.new(nil, 404, nil)
-			CMDPrint.print_error("#{ua_string}")
-		rescue Errno::ETIMEDOUT
-			res = Net::HTTPNotFound.new(nil, 404, nil)
-			CMDPrint.print_error("#{ua_string}")
-		rescue Net::HTTP::Persistent::Error
-			res = Net::HTTPNotFound.new(nil, 404, nil)
+		rescue => e
 			CMDPrint.print_error("#{ua_string}")
 		end
 	end
