@@ -17,8 +17,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ##
 
-#!/usr/bin/ruby
-
 require_relative 'utils'
 require_relative 'cmd_print'
 require_relative 'http_request'
