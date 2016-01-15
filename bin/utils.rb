@@ -17,8 +17,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ##
 
-#!/usr/bin/ruby
-
 class Utils
 
 	attr_accessor :page_result
