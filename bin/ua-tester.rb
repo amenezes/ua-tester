@@ -14,8 +14,6 @@
 # GNU General Public Licens
 ##
 
-#!/usr/bin/ruby
-
 require 'optparse'
 require_relative 'scan'
 require_relative 'cmd_print'
