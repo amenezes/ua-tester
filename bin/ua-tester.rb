@@ -22,7 +22,7 @@ require_relative 'cmd_print'
 
 class UATester
 
-	VERSION="0.7a"
+	VERSION="0.8"
 
 	def initialize
 		@scan = Scan.new

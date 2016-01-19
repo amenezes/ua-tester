@@ -1,3 +1,4 @@
+#!/usr/bin/ruby
 ##
 # UA-Tester
 #
@@ -17,11 +18,11 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ##
 
-#!/usr/bin/ruby
-
-require 'yaml'
 require 'rubygems'
-require 'mechanize'
+require 'yaml'
+require 'typhoeus/adapters/faraday'
+require 'faraday'
+require 'faraday_middleware'
 require_relative 'cmd_print'
 
 class HttpRequest
@@ -30,22 +31,21 @@ class HttpRequest
 	HTTP_HEADER_CONFIG_FILE="#{Dir.pwd}/config/http-header-template.yaml"
 
 	def initialize(browser_template=DEFAULT_BROWSER)
-		@http_request = Mechanize.new
 		@http_header_fields = config_http_header browser_template
 	end
 
 	def uri(uri)
-		@http_request.get uri
-		@http_request.request_headers = @http_header_fields
-		@http_request.read_timeout = 5
-
-		if uri.port == 443
-			@http_request.verify_mode = OpenSSL::SSL::VERIFY_NONE
+		Faraday.use(FaradayMiddleware::FollowRedirects)
+		@conn = Faraday.new(:url => uri) do |faraday|
+			faraday.request  :url_encoded
+			#faraday.response :logger
+			faraday.use FaradayMiddleware::FollowRedirects, limit: 3
+			faraday.adapter  :typhoeus
 		end
 	end
 
 	def proxy(addr, port)
-		@http_request.set_proxy addr, port
+
 	end
 
 	def config_http_header(browser_template)
@@ -59,16 +59,29 @@ class HttpRequest
 
 	def make_request(uri, ua_string)
 		begin
-			@http_request.user_agent = ua_string
-			res = @http_request.get uri
-			case res.code
-			when "200"
-				CMDPrint.print_good("#{ua_string}")
-			when "404","403"
-				CMDPrint.print_error("#{ua_string}")
+
+			resp = @conn.get do |req|
+				req.url uri
+				req.options.timeout = 5
+				req.options.open_timeout = 5
+				req.headers['User-Agent'] = ua_string
 			end
+
+			case resp.status
+			when 200
+				CMDPrint.print_good(ua_string)
+			when 401,403,405,406,500,501,502,503,504,505
+				CMDPrint.print_error(ua_string)
+			end
+		rescue Faraday::TimeoutError
+			CMDPrint.print_info "request timed out."
+		#rescue Faraday::ConnectionFailed
+		#	CMDPrint.print_info "couldn't resolve host name."
 		rescue => e
-			CMDPrint.print_error("#{ua_string}")
+			#CMDPrint.print_error("Hum... there's something wrong!")
+			#CMDPrint.print_debug e
+			CMDPrint.print_error e
 		end
 	end
+
 end

@@ -9,4 +9,6 @@ source 'https://rubygems.org'
 
 gem 'OptionParser'
 gem 'require_relative'
-gem 'mechanize'
+gem 'faraday'
+gem 'typhoeus'
+gem 'faraday_middleware'
