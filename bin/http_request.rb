@@ -18,6 +18,10 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ##
 
+<<<<<<< HEAD
+=======
+require 'yaml'
+>>>>>>> origin/master
 require 'rubygems'
 require 'yaml'
 require 'typhoeus/adapters/faraday'
