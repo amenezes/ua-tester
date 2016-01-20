@@ -8,5 +8,3 @@
 - Add feature to check http response header to identify common security http headers
 - Add feature to integrate scan with TOR network
 - Refactor the source code
-- Add new features to auxiliary script <uactl.rb>
-- Evaluate typhoeus <https://github.com/typhoeus/typhoeus> gem
