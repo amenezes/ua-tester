@@ -75,12 +75,11 @@ class HttpRequest
 				CMDPrint.print_error(ua_string)
 			end
 		rescue Faraday::TimeoutError
-			CMDPrint.print_info "request timed out."
-		#rescue Faraday::ConnectionFailed
-		#	CMDPrint.print_info "couldn't resolve host name."
+			CMDPrint.print_error "#{ua_string}"
+		rescue Faraday::ConnectionFailed
+			CMDPrint.print_info "couldn't resolve host name."
+			exit
 		rescue => e
-			#CMDPrint.print_error("Hum... there's something wrong!")
-			#CMDPrint.print_debug e
 			CMDPrint.print_error e
 		end
 	end
