@@ -11,16 +11,16 @@
  - Bundler: http://bundler.io
 
 <b>Installation:</b>
-- bundle install
+- <i>bundle install</i>
 
 <b>Usage:</b>
-- ruby ua-tester.rb -u \<target_url\>
+- <i>ruby ua-tester.rb -u \<target_url\></i>
 
 Module to Assist Management of Signature Files \<to newbie :P\>:
-- ruby uactl \<option\>
+- <i>ruby uactl \<option\></i>
 
 An alternative way is to simply rename the file extension for '.yaml', for example:
- - 'cms_joomla.txt' to 'cms_joomla.yaml'
+ - '<i>cms_joomla.txt</i>' to '<i>cms_joomla.yaml</i>'
 
 <b>Contact:</b>
  - e-mail: alexandre.fmenezes@gmail.com
