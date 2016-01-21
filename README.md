@@ -1,6 +1,6 @@
 # ua-tester
 
-Dependencies:
+<b>Dependencies:</b>
  - Ruby: http://www.ruby-lang.org
   - minimum version 1.9.3
  - OptionParser: https://rubygems.org/gems/OptionParser
@@ -10,10 +10,10 @@ Dependencies:
  - Faraday_middleware: https://github.com/lostisland/faraday_middleware
  - Bundler: http://bundler.io
 
-Installation:
+<b>Installation:</b>
 - bundle install
 
-Usage:
+<b>Usage:</b>
 - ruby ua-tester.rb -u \<target_url\>
 
 Module to Assist Management of Signature Files \<to newbie :P\>:
@@ -22,7 +22,7 @@ Module to Assist Management of Signature Files \<to newbie :P\>:
 An alternative way is to simply rename the file extension for '.yaml', for example:
  - 'cms_joomla.txt' to 'cms_joomla.yaml'
 
-Contact:
+<b>Contact:</b>
  - e-mail: alexandre.fmenezes@gmail.com
  - twitter: @ale_menezes
 
