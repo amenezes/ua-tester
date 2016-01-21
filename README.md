@@ -5,7 +5,9 @@ Dependencies:
   - minimum version 1.9.3
  - OptionParser: https://rubygems.org/gems/OptionParser
  - RequireRelative: http://www.steveklabnik.com/require_relative/
- - Mechanize: http://mechanize.rubyforge.org/
+ - Faraday: https://github.com/lostisland/faraday
+ - Typhoeus: https://github.com/typhoeus/typhoeus
+ - Faraday_middleware: https://github.com/lostisland/faraday_middleware
  - Bundler: http://bundler.io
 
 Installation:
@@ -23,6 +25,5 @@ An alternative way is to simply rename the file extension for '.yaml', for examp
 Contact:
  - e-mail: alexandre.fmenezes@gmail.com
  - twitter: @ale_menezes
- - gpg: 
 
-More on wiki...
+More on <a href="https://github.com/amenezes/ua-tester/wiki">wiki</a>...
