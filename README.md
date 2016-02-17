@@ -19,11 +19,11 @@
   Usage: ua-tester [options]
 
   OPTIONS:
-   -p PROXY_ADDR:PROXY_PORT, --proxy  Set a proxy to use. Default it's disable
-   -u, --url                          URL target do scan. Default it's localhost.
-   -o, --output			    Set a file to output result scan.
-   -b, --browser			    Set a browser template for HTTP Headers, options available are: [firefox, safari and chrome]
-   -h, --help			    Print this help message.
+   -p PROXY_ADDR:PROXY_PORT, --proxy &#9; Set a proxy to use. Default it's disable
+   -u, --url &#9;&#9;&#9;&#9; URL target do scan. Default it's localhost.
+   -o, --output &#9;&#9;&#9; Set a file to output result scan.
+   -b, --browser &#9;&#9;&#9; Set a browser template for HTTP Headers, options available are: [firefox, safari and chrome]
+   -h, --help &#9;&#9;&#9;&#9; Print this help message.
  </code>
 </pre>
 
@@ -33,12 +33,12 @@ Module to Assist Management of Signature Files \<to newbie :P\>:
   Usage: uactl [options]
 
   OPTIONS:
-  -a, --enable-all  		Enable all signature files.
-  -d, --disable-all              Disable all signature files.
-  -l, --list			List all signature files.
-  -e, --enable			Enable a unique file.
-  -r, --disable			Disable a unique file.
-  -h, --help			Print this help message.
+  -a, --enable-all &#9;&#9; Enable all signature files.
+  -d, --disable-all &#9;&#9; Disable all signature files.
+  -l, --list &#9;&#9;&#9; List all signature files.
+  -e, --enable &#9;&#9;&#9; Enable a unique file.
+  -r, --disable &#9;&#9; Disable a unique file.
+  -h, --help &#9;&#9;&#9; Print this help message.
  </code>
 </pre>
 
