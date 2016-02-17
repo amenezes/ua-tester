@@ -1,4 +1,4 @@
-# ua-tester
+# ua-tester <a href="https://codeclimate.com/github/amenezes/ua-tester"><img src="https://codeclimate.com/github/amenezes/ua-tester/badges/gpa.svg" /></a>
 
 <b>Dependencies:</b>
  - Ruby: http://www.ruby-lang.org
