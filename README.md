@@ -23,7 +23,6 @@ An alternative way is to simply rename the file extension for '.yaml', for examp
  - '<i>cms_joomla.txt</i>' to '<i>cms_joomla.yaml</i>'
 
 <b>Contact:</b>
- - e-mail: alexandre.fmenezes@gmail.com
- - twitter: @ale_menezes
+  - twitter: @ale_menezes
 
 More on <a href="https://github.com/amenezes/ua-tester/wiki">wiki</a>...
