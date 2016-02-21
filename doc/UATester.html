@@ -1,391 +1,391 @@
-<!DOCTYPE html>
-
-<html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 
-<title>class UATester - RDoc Documentation</title>
+  <title>Class: UATester</title>
 
-<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
-<script type="text/javascript">
-  var rdoc_rel_prefix = "./";
-</script>
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
 
-<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
-
-
+</head>
 <body id="top" class="class">
-<nav id="metadata">
-  <nav id="home-section" class="section">
-  <h3 class="section-header">
-    <a href="./index.html">Home</a>
-    <a href="./table_of_contents.html#classes">Classes</a>
-    <a href="./table_of_contents.html#methods">Methods</a>
-  </h3>
-</nav>
 
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
 
-  <nav id="search-section" class="section project-section" class="initially-hidden">
-  <form action="#" method="get" accept-charset="utf-8">
-    <h3 class="section-header">
-      <input type="text" name="search" placeholder="Search" id="search-field"
-             title="Type to search, Up and Down to navigate, Enter to load">
-    </h3>
-  </form>
-
-  <ul id="search-results" class="initially-hidden"></ul>
-</nav>
-
-
-  
-
-  <div id="file-metadata">
-    <nav id="file-list-section" class="section">
-  <h3 class="section-header">Defined In</h3>
-  <ul>
-    <li>ua-tester.rb
-  </ul>
-</nav>
-
-    
-  </div>
-
-  <div id="class-metadata">
-    
-    <nav id="parent-class-section" class="section">
-  <h3 class="section-header">Parent</h3>
-  
-  <p class="link">Object
-  
-</nav>
-
-    
-    
-    <!-- Method Quickref -->
-<nav id="method-list-section" class="section">
-  <h3 class="section-header">Methods</h3>
-
-  <ul class="link-list">
-    
-    <li ><a href="#method-c-new">::new</a>
-    
-    <li ><a href="#method-i-options_menu">#options_menu</a>
-    
-    <li ><a href="#method-i-print_banner">#print_banner</a>
-    
-    <li ><a href="#method-i-run">#run</a>
-    
-  </ul>
-</nav>
-
-  </div>
-
-  <div id="project-metadata">
-    <nav id="fileindex-section" class="section project-section">
-  <h3 class="section-header">Pages</h3>
-
-  <ul>
-  
-    <li class="file"><a href="./config/http-header-template_yaml.html">http-header-template.yaml</a>
-  
-    <li class="file"><a href="./doc/CMDPrint_html.html">CMDPrint.html</a>
-  
-    <li class="file"><a href="./doc/GenericRequest_html.html">GenericRequest.html</a>
-  
-    <li class="file"><a href="./doc/HTTPRequest_html.html">HTTPRequest.html</a>
-  
-    <li class="file"><a href="./doc/HTTPSRequest_html.html">HTTPSRequest.html</a>
-  
-    <li class="file"><a href="./doc/Scan_html.html">Scan.html</a>
-  
-    <li class="file"><a href="./doc/UATester_html.html">UATester.html</a>
-  
-    <li class="file"><a href="./doc/Utils_html.html">Utils.html</a>
-  
-    <li class="file"><a href="./doc/config/http-header-template_yaml_html.html">http-header-template_yaml.html</a>
-  
-    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
-  
-    <li class="file"><a href="./doc/doc/created_rid_html.html">created_rid.html</a>
-  
-    <li class="file"><a href="./doc/index_html.html">index.html</a>
-  
-    <li class="file"><a href="./doc/js/darkfish_js.html">darkfish.js</a>
-  
-    <li class="file"><a href="./doc/js/jquery_js.html">jquery.js</a>
-  
-    <li class="file"><a href="./doc/js/navigation_js.html">navigation.js</a>
-  
-    <li class="file"><a href="./doc/js/search_js.html">search.js</a>
-  
-    <li class="file"><a href="./doc/js/search_index_js.html">search_index.js</a>
-  
-    <li class="file"><a href="./doc/js/searcher_js.html">searcher.js</a>
-  
-    <li class="file"><a href="./doc/rdoc_css.html">rdoc.css</a>
-  
-    <li class="file"><a href="./doc/signatures/snort-ua_yaml_html.html">snort-ua_yaml.html</a>
-  
-    <li class="file"><a href="./doc/table_of_contents_html.html">table_of_contents.html</a>
-  
-    <li class="file"><a href="./signatures/snort-ua_yaml.html">snort-ua.yaml</a>
-  
-  </ul>
-</nav>
-
-    <nav id="classindex-section" class="section project-section">
-  <h3 class="section-header">Class and Module Index</h3>
-
-  <ul class="link-list">
-  
-    <li><a href="./CMDPrint.html">CMDPrint</a>
-  
-    <li><a href="./GenericRequest.html">GenericRequest</a>
-  
-    <li><a href="./HTTPRequest.html">HTTPRequest</a>
-  
-    <li><a href="./HTTPSRequest.html">HTTPSRequest</a>
-  
-    <li><a href="./Scan.html">Scan</a>
-  
-    <li><a href="./UATester.html">UATester</a>
-  
-    <li><a href="./Utils.html">Utils</a>
-  
-  </ul>
-</nav>
-
-  </div>
-</nav>
-
-<div id="documentation">
-  <h1 class="class">class UATester</h1>
-
-  <div id="description" class="description">
-    
-  </div><!-- description -->
-
-  
-  
-  
-  <section id="5Buntitled-5D" class="documentation-section">
-    
-
-    
-
-    
-    <!-- Constants -->
-    <section id="constants-list" class="section">
-      <h3 class="section-header">Constants</h3>
-      <dl>
-      
-        <dt id="VERSION">VERSION
-        
-        <dd class="description">
-        
-      
-      </dl>
-    </section>
-    
-
-    
-
-    <!-- Methods -->
-    
-     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Public Class Methods</h3>
-
-    
-      <div id="method-c-new" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">new</span><span
-            class="method-args">()</span>
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
           
-          <span class="method-click-advice">click to toggle source</span>
+            <li><a href="./bin/ua-tester_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="bin/ua-tester.rb">bin/ua-tester.rb</a></li>
           
+            <li><a href="./ua-tester_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="ua-tester.rb">ua-tester.rb</a></li>
+          
+          </ul>
         </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
         
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
 
-        <div class="method-description">
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
           
+          <li><a href="#method-c-new">::new</a></li>
           
+          <li><a href="#method-i-options_menu">#options_menu</a></li>
           
+          <li><a href="#method-i-print_banner">#print_banner</a></li>
           
+          <li><a href="#method-i-run">#run</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a></li>
+        
+          <li class="file"><a href="./Gemfile.html">Gemfile</a></li>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./TODO.html">TODO</a></li>
+        
+          <li class="file"><a href="./doc/README_txt.html">README.txt</a></li>
+        
+          <li class="file"><a href="./signatures/cms_joomla_txt.html">cms_joomla.txt</a></li>
+        
+          <li class="file"><a href="./signatures/default_txt.html">default.txt</a></li>
+        
+          <li class="file"><a href="./signatures/mobile_devices_txt.html">mobile_devices.txt</a></li>
+        
+          <li class="file"><a href="./signatures/modsecurity_bad_robots_txt.html">modsecurity_bad_robots.txt</a></li>
+        
+          <li class="file"><a href="./signatures/modsecurity_scanners_txt.html">modsecurity_scanners.txt</a></li>
+        
+          <li class="file"><a href="./signatures/spiders_txt.html">spiders.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./CMDPrint.html">CMDPrint</a></li>
+        
+          <li><a href="./HttpRequest.html">HttpRequest</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./SaveCSV.html">SaveCSV</a></li>
+        
+          <li><a href="./Scan.html">Scan</a></li>
+        
+          <li><a href="./UACtl.html">UACtl</a></li>
+        
+          <li><a href="./UATester.html">UATester</a></li>
+        
+          <li><a href="./Utils.html">Utils</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">UATester</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="VERSION">VERSION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
 
           
-          <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File ua-tester.rb, line 10</span>
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File bin/ua-tester.rb, line 25</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
-        <span class="ruby-ivar">@optparser</span> = <span class="ruby-identifier">options_menu</span>
         <span class="ruby-ivar">@scan</span> = <span class="ruby-constant">Scan</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- new-source -->
+            </div><!-- new-source -->
+            
+          </div>
+
           
-        </div>
 
-        
+          
+        </div><!-- new-method -->
 
-        
-      </div><!-- new-method -->
-
+      
+      </div><!-- public-class-method-details -->
     
-    </section><!-- public-class-method-details -->
-  
-     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Public Instance Methods</h3>
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
 
-    
-      <div id="method-i-options_menu" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">options_menu</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
+      
+        <div id="options_menu-method" class="method-detail ">
+          <a name="method-i-options_menu"></a>
 
           
-          <div class="method-source-code" id="options_menu-source">
-            <pre><span class="ruby-comment"># File ua-tester.rb, line 21</span>
+          <div class="method-heading">
+            <span class="method-name">options_menu</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="options_menu-source">
+<pre>
+<span class="ruby-comment"># File bin/ua-tester.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">options_menu</span>
+
         <span class="ruby-ivar">@options</span> = {}
         <span class="ruby-identifier">optparser</span> = <span class="ruby-constant">OptionParser</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">opt</span><span class="ruby-operator">|</span>
                 <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">banner</span> = <span class="ruby-identifier">print_banner</span>
                 <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">separator</span> <span class="ruby-string">&quot;&quot;</span>
+                <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">separator</span> <span class="ruby-string">&quot;OPTIONS:&quot;</span>
 
-                <span class="ruby-ivar">@options</span>[<span class="ruby-value">:help</span>] = <span class="ruby-string">&quot;&quot;</span>
-                <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-h&quot;</span>, <span class="ruby-string">&quot;--help&quot;</span>, <span class="ruby-string">&quot;Print this help message&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">op</span><span class="ruby-operator">|</span>
-                        <span class="ruby-identifier">exit</span>
+                <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-p PROXY_ADDR:PROXY_PORT&quot;</span>, <span class="ruby-string">&quot;--proxy PROXY_ADDR:PROXY_PORT&quot;</span>, <span class="ruby-string">&quot;Set a proxy to use. Default it's disable&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+                        <span class="ruby-ivar">@options</span>[<span class="ruby-value">:proxy</span>] = <span class="ruby-identifier">p</span>
+                        <span class="ruby-ivar">@scan</span>.<span class="ruby-identifier">use_proxy</span>(<span class="ruby-keyword">true</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value">:proxy</span>])
                 <span class="ruby-keyword">end</span>
-        
-                <span class="ruby-ivar">@options</span>[<span class="ruby-value">:url</span>] = <span class="ruby-string">&quot;localhost&quot;</span>
-                <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-u&quot;</span>, <span class="ruby-string">&quot;--url&quot;</span>, <span class="ruby-string">&quot;URL target to scan. Default it&#39;s &lt;localhost&gt;&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">op</span><span class="ruby-operator">|</span>
+
+                <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-u TARGET&quot;</span>, <span class="ruby-string">&quot;--url TARGET&quot;</span>, <span class="ruby-string">&quot;URL target to scan. Default it's &lt;localhost&gt;&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">op</span><span class="ruby-operator">|</span>
+                        <span class="ruby-ivar">@options</span>[<span class="ruby-value">:url</span>] = <span class="ruby-identifier">op</span>
                         <span class="ruby-ivar">@scan</span>.<span class="ruby-identifier">start_scan</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:url</span>]
                 <span class="ruby-keyword">end</span>
-                
-                <span class="ruby-ivar">@options</span>[<span class="ruby-value">:browser</span>] = <span class="ruby-string">&quot;&quot;</span>
-                <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-b&quot;</span>, <span class="ruby-string">&quot;--browser&quot;</span>, <span class="ruby-string">&quot;Set a browser template for HTTP header, @options are: [firefox, safari and chrome]&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">op</span><span class="ruby-operator">|</span>
+
+                <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-o&quot;</span>, <span class="ruby-string">&quot;--output&quot;</span>, <span class="ruby-string">&quot;Set a &lt;FILE&gt; to output result scan&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-b&quot;</span>, <span class="ruby-string">&quot;--browser&quot;</span>, <span class="ruby-string">&quot;Set a browser template for HTTP header, options are: [firefox, safari and chrome]&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">b</span><span class="ruby-operator">|</span>
+                        <span class="ruby-ivar">@options</span>[<span class="ruby-value">:browser</span>] = <span class="ruby-identifier">b</span>
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-h&quot;</span>, <span class="ruby-string">&quot;--help&quot;</span>, <span class="ruby-string">&quot;Print this help message&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">optparser</span>
+                        <span class="ruby-identifier">exit</span>
                 <span class="ruby-keyword">end</span>
         <span class="ruby-keyword">end</span>
-        <span class="ruby-keyword">return</span> <span class="ruby-identifier">optparser</span>
+        <span class="ruby-identifier">optparser</span>.<span class="ruby-identifier">parse!</span>
+        <span class="ruby-identifier">mandatory</span> = [<span class="ruby-value">:url</span>]
+        <span class="ruby-identifier">missing</span> = <span class="ruby-identifier">mandatory</span>.<span class="ruby-identifier">select</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">param</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@options</span>[<span class="ruby-identifier">param</span>].<span class="ruby-identifier">nil?</span> }
+        <span class="ruby-keyword">unless</span> <span class="ruby-identifier">missing</span>.<span class="ruby-identifier">empty?</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-identifier">optparser</span>
+                <span class="ruby-identifier">exit</span>
+        <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- options_menu-source -->
-          
-        </div>
+            </div><!-- options_menu-source -->
+            
+          </div>
 
-        
-
-        
-      </div><!-- options_menu-method -->
-
-    
-      <div id="method-i-print_banner" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">print_banner</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
           
 
           
-          <div class="method-source-code" id="print_banner-source">
-            <pre><span class="ruby-comment"># File ua-tester.rb, line 15</span>
+        </div><!-- options_menu-method -->
+
+      
+        <div id="print_banner-method" class="method-detail ">
+          <a name="method-i-print_banner"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_banner</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_banner-source">
+<pre>
+<span class="ruby-comment"># File bin/ua-tester.rb, line 29</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">print_banner</span>
-        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;User-Agent Tester [ua-tester.rb]&quot;</span>
-        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;version: #{VERSION}&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;&gt; User-Agent Tester [ua-tester.rb]&quot;</span>
+        <span class="ruby-constant">CMDPrint</span>.<span class="ruby-identifier">print_version</span> <span class="ruby-node">&quot;version: #{VERSION}&quot;</span>
         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;&quot;</span>
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- print_banner-source -->
-          
-        </div>
+            </div><!-- print_banner-source -->
+            
+          </div>
 
-        
-
-        
-      </div><!-- print_banner-method -->
-
-    
-      <div id="method-i-run" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">run</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
           
 
           
-          <div class="method-source-code" id="run-source">
-            <pre><span class="ruby-comment"># File ua-tester.rb, line 44</span>
+        </div><!-- print_banner-method -->
+
+      
+        <div id="run-method" class="method-detail ">
+          <a name="method-i-run"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="run-source">
+<pre>
+<span class="ruby-comment"># File bin/ua-tester.rb, line 74</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span>
         <span class="ruby-keyword">begin</span>
-                <span class="ruby-keyword">case</span> <span class="ruby-constant">ARGV</span>[<span class="ruby-value">0</span>]
-                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;-u&quot;</span>, <span class="ruby-string">&quot;--url&quot;</span>
-                        <span class="ruby-ivar">@options</span>[<span class="ruby-value">:url</span>] = <span class="ruby-constant">ARGV</span>[<span class="ruby-value">1</span>]
-                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[+] target: &lt;#{@options[:url]}&gt;&quot;</span>
-                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;-b&quot;</span>, <span class="ruby-string">&quot;--browser&quot;</span>
-                        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;TODO&quot;</span>
-                <span class="ruby-keyword">else</span>
-                        <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@optparser</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-ivar">@optparser</span>.<span class="ruby-identifier">parse!</span>
+                <span class="ruby-identifier">options_menu</span>
         <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
                 <span class="ruby-identifier">puts</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>.<span class="ruby-identifier">capitalize</span>
                 <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
         <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- run-source -->
+            </div><!-- run-source -->
+            
+          </div>
+
           
-        </div>
 
-        
+          
+        </div><!-- run-method -->
 
-        
-      </div><!-- run-method -->
-
+      
+      </div><!-- public-instance-method-details -->
     
-    </section><!-- public-instance-method-details -->
+    </div><!-- 5Buntitled-5D -->
   
-  </section><!-- 5Buntitled-5D -->
 
-</div><!-- documentation -->
+  </div><!-- documentation -->
 
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
 
-<footer id="validator-badges">
-  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
-  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
-</footer>
+</body>
+</html>
 

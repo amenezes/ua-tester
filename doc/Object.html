@@ -5,7 +5,7 @@
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 
-  <title>Class: Utils</title>
+  <title>Class: Object</title>
 
   <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -34,8 +34,8 @@
         <div class="section-body">
           <ul>
           
-            <li><a href="./bin/utils_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="bin/utils.rb">bin/utils.rb</a></li>
+            <li><a href="./bin/scan_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="bin/scan.rb">bin/scan.rb</a></li>
           
           </ul>
         </div>
@@ -50,7 +50,7 @@
       <div id="parent-class-section" class="section">
         <h3 class="section-header">Parent</h3>
         
-        <p class="link"><a href="Object.html">Object</a></p>
+        <p class="link">BasicObject</p>
         
       </div>
       
@@ -65,11 +65,7 @@
         <h3 class="section-header">Methods</h3>
         <ul class="link-list">
           
-          <li><a href="#method-i-load_signatures_files">#load_signatures_files</a></li>
-          
-          <li><a href="#method-i-normalize">#normalize</a></li>
-          
-          <li><a href="#method-i-setting_proxy">#setting_proxy</a></li>
+          <li><a href="#method-i-utils">#utils</a></li>
           
         </ul>
       </div>
@@ -151,7 +147,7 @@
   </div>
 
   <div id="documentation">
-    <h1 class="class">Utils</h1>
+    <h1 class="class">Object</h1>
 
     <div id="description" class="description">
       
@@ -168,30 +164,6 @@
       
 
       
-      <!-- Attributes -->
-      <div id="attribute-method-details" class="method-section section">
-        <h3 class="section-header">Attributes</h3>
-
-        
-        <div id="page_result-attribute-method" class="method-detail">
-          <a name="page_result"></a>
-          
-          <a name="page_result="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">page_result</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
-        
-      </div><!-- attribute-method-details -->
-      
 
       <!-- Methods -->
       
@@ -199,108 +171,52 @@
         <h3 class="section-header">Public Instance Methods</h3>
 
       
-        <div id="load_signatures_files-method" class="method-detail ">
-          <a name="method-i-load_signatures_files"></a>
+        <div id="utils-method" class="method-detail ">
+          <a name="method-i-utils"></a>
 
           
           <div class="method-heading">
-            <span class="method-name">load_signatures_files</span><span
-              class="method-args">()</span>
+            <span class="method-name">utils</span><span
+              class="method-args"></span>
             <span class="method-click-advice">click to toggle source</span>
           </div>
           
 
           <div class="method-description">
             
-            
+            <p>UA-Tester</p>
+
+<p>Copyright (C) 2015 - 2015 - BSecTeam</p>
+
+<p>This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation, either version 2 of the License, or (at your option)
+any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+more details.</p>
+
+<p>You should have received a copy of the GNU General Public License along
+with this program.  If not, see &lt;<a
+href="http://www.gnu.org/licenses/">www.gnu.org/licenses/</a>&gt;.</p>
             
 
             
-            <div class="method-source-code" id="load_signatures_files-source">
+            <div class="method-source-code" id="utils-source">
 <pre>
-<span class="ruby-comment"># File bin/utils.rb, line 26</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_signatures_files</span>
-        <span class="ruby-identifier">files</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-node">&quot;#{Dir.pwd}/signatures/*.yaml&quot;</span>)
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- load_signatures_files-source -->
+<span class="ruby-comment"># File bin/scan.rb, line 20</span>
+<span class="ruby-identifier">require_relative</span> <span class="ruby-string">'utils'</span>
+</pre>
+            </div><!-- utils-source -->
             
           </div>
 
           
 
           
-        </div><!-- load_signatures_files-method -->
-
-      
-        <div id="normalize-method" class="method-detail ">
-          <a name="method-i-normalize"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">normalize</span><span
-              class="method-args">(url)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="normalize-source">
-<pre>
-<span class="ruby-comment"># File bin/utils.rb, line 30</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">normalize</span>(<span class="ruby-identifier">url</span>)
-        <span class="ruby-keyword">if</span> <span class="ruby-identifier">url</span>.<span class="ruby-identifier">start_with?</span> <span class="ruby-string">&quot;http://&quot;</span>
-        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">url</span>.<span class="ruby-identifier">start_with?</span> <span class="ruby-string">&quot;https://&quot;</span>
-        <span class="ruby-keyword">else</span>
-                <span class="ruby-identifier">url</span> = <span class="ruby-node">&quot;http://#{url}&quot;</span>
-        <span class="ruby-keyword">end</span>
-        <span class="ruby-keyword">return</span> <span class="ruby-constant">URI</span>(<span class="ruby-identifier">url</span>)
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- normalize-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- normalize-method -->
-
-      
-        <div id="setting_proxy-method" class="method-detail ">
-          <a name="method-i-setting_proxy"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">setting_proxy</span><span
-              class="method-args">(params)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="setting_proxy-source">
-<pre>
-<span class="ruby-comment"># File bin/utils.rb, line 39</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">setting_proxy</span>(<span class="ruby-identifier">params</span>)
-        <span class="ruby-identifier">params</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;:&quot;</span>)
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- setting_proxy-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- setting_proxy-method -->
+        </div><!-- utils-method -->
 
       
       </div><!-- public-instance-method-details -->

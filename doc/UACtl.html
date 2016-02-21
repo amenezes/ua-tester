@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: UACtl</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./uactl_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="uactl.rb">uactl.rb</a></li>
+          
+            <li><a href="./bin/uactl_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="bin/uactl.rb">bin/uactl.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-disable_all">#disable_all</a></li>
+          
+          <li><a href="#method-i-disable_signature_file">#disable_signature_file</a></li>
+          
+          <li><a href="#method-i-enable_all">#enable_all</a></li>
+          
+          <li><a href="#method-i-enable_signature_file">#enable_signature_file</a></li>
+          
+          <li><a href="#method-i-list">#list</a></li>
+          
+          <li><a href="#method-i-options_menu">#options_menu</a></li>
+          
+          <li><a href="#method-i-print_banner">#print_banner</a></li>
+          
+          <li><a href="#method-i-run">#run</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a></li>
+        
+          <li class="file"><a href="./Gemfile.html">Gemfile</a></li>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./TODO.html">TODO</a></li>
+        
+          <li class="file"><a href="./doc/README_txt.html">README.txt</a></li>
+        
+          <li class="file"><a href="./signatures/cms_joomla_txt.html">cms_joomla.txt</a></li>
+        
+          <li class="file"><a href="./signatures/default_txt.html">default.txt</a></li>
+        
+          <li class="file"><a href="./signatures/mobile_devices_txt.html">mobile_devices.txt</a></li>
+        
+          <li class="file"><a href="./signatures/modsecurity_bad_robots_txt.html">modsecurity_bad_robots.txt</a></li>
+        
+          <li class="file"><a href="./signatures/modsecurity_scanners_txt.html">modsecurity_scanners.txt</a></li>
+        
+          <li class="file"><a href="./signatures/spiders_txt.html">spiders.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./CMDPrint.html">CMDPrint</a></li>
+        
+          <li><a href="./HttpRequest.html">HttpRequest</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./SaveCSV.html">SaveCSV</a></li>
+        
+          <li><a href="./Scan.html">Scan</a></li>
+        
+          <li><a href="./UACtl.html">UACtl</a></li>
+        
+          <li><a href="./UATester.html">UATester</a></li>
+        
+          <li><a href="./Utils.html">Utils</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">UACtl</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="VERSION">VERSION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="disable_all-method" class="method-detail ">
+          <a name="method-i-disable_all"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">disable_all</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="disable_all-source">
+<pre>
+<span class="ruby-comment"># File uactl.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">disable_all</span>
+  <span class="ruby-constant">CMDPrint</span>.<span class="ruby-identifier">print_info</span> <span class="ruby-string">&quot;disabled all signature files...&quot;</span>
+
+  <span class="ruby-identifier">rename_signature_files</span> <span class="ruby-string">&quot;.yaml&quot;</span>, <span class="ruby-string">&quot;.txt&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- disable_all-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- disable_all-method -->
+
+      
+        <div id="disable_signature_file-method" class="method-detail ">
+          <a name="method-i-disable_signature_file"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">disable_signature_file</span><span
+              class="method-args">(file)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="disable_signature_file-source">
+<pre>
+<span class="ruby-comment"># File uactl.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">disable_signature_file</span> <span class="ruby-identifier">file</span>
+  <span class="ruby-constant">CMDPrint</span>.<span class="ruby-identifier">print_info</span> <span class="ruby-string">&quot;All signature files now are disabled.&quot;</span>
+
+  <span class="ruby-identifier">test_file</span> <span class="ruby-identifier">file</span>, <span class="ruby-string">&quot;.txt&quot;</span>
+  <span class="ruby-identifier">rename_signature_files</span>(<span class="ruby-string">&quot;.yaml&quot;</span>,
+    <span class="ruby-string">&quot;.txt&quot;</span>,
+    <span class="ruby-identifier">get_signature_files</span>(
+      <span class="ruby-node">&quot;#{Dir.pwd}/signatures/#{file}*.{yaml,txt}&quot;</span>
+    )
+  )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- disable_signature_file-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- disable_signature_file-method -->
+
+      
+        <div id="enable_all-method" class="method-detail ">
+          <a name="method-i-enable_all"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">enable_all</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="enable_all-source">
+<pre>
+<span class="ruby-comment"># File uactl.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">enable_all</span>
+  <span class="ruby-constant">CMDPrint</span>.<span class="ruby-identifier">print_info</span> <span class="ruby-string">&quot;enabled all signature files...&quot;</span>
+
+  <span class="ruby-identifier">rename_signature_files</span> <span class="ruby-string">&quot;.txt&quot;</span>, <span class="ruby-string">&quot;.yaml&quot;</span>
+
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- enable_all-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- enable_all-method -->
+
+      
+        <div id="enable_signature_file-method" class="method-detail ">
+          <a name="method-i-enable_signature_file"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">enable_signature_file</span><span
+              class="method-args">(file)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="enable_signature_file-source">
+<pre>
+<span class="ruby-comment"># File uactl.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">enable_signature_file</span> <span class="ruby-identifier">file</span>
+  <span class="ruby-constant">CMDPrint</span>.<span class="ruby-identifier">print_info</span> <span class="ruby-string">&quot;All signature files now are enabled.&quot;</span>
+
+  <span class="ruby-identifier">test_file</span> <span class="ruby-identifier">file</span>, <span class="ruby-string">&quot;.yaml&quot;</span>
+
+  <span class="ruby-identifier">rename_signature_files</span>(<span class="ruby-string">&quot;.txt&quot;</span>,
+    <span class="ruby-string">&quot;.yaml&quot;</span>,
+    <span class="ruby-identifier">get_signature_files</span>(
+      <span class="ruby-node">&quot;#{Dir.pwd}/signatures/#{file}*.{yaml,txt}&quot;</span>
+    )
+  )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- enable_signature_file-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- enable_signature_file-method -->
+
+      
+        <div id="list-method" class="method-detail ">
+          <a name="method-i-list"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">list</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="list-source">
+<pre>
+<span class="ruby-comment"># File uactl.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">list</span>
+  <span class="ruby-identifier">files</span> = <span class="ruby-identifier">get_signature_files</span>
+
+  <span class="ruby-constant">CMDPrint</span>.<span class="ruby-identifier">print_info</span> <span class="ruby-string">&quot;valid files to &lt;ua-tester.rb&gt; are&quot;</span>
+  <span class="ruby-identifier">files</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">CMDPrint</span>.<span class="ruby-identifier">print_good</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span> <span class="ruby-identifier">file</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- list-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- list-method -->
+
+      
+        <div id="options_menu-method" class="method-detail ">
+          <a name="method-i-options_menu"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">options_menu</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="options_menu-source">
+<pre>
+<span class="ruby-comment"># File uactl.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">options_menu</span>
+  <span class="ruby-ivar">@options</span> = {}
+              <span class="ruby-identifier">optparser</span> = <span class="ruby-constant">OptionParser</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">opt</span><span class="ruby-operator">|</span>
+                      <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">banner</span> = <span class="ruby-identifier">print_banner</span>
+                      <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">separator</span> <span class="ruby-string">&quot;&quot;</span>
+                      <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">separator</span> <span class="ruby-string">&quot;OPTIONS:&quot;</span>
+
+                      <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-a&quot;</span>, <span class="ruby-string">&quot;--enable-all&quot;</span>, <span class="ruby-string">&quot;Enable all signature files.&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enable_all</span>
+      <span class="ruby-identifier">exit</span>
+                      <span class="ruby-keyword">end</span>
+
+                      <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-d&quot;</span>, <span class="ruby-string">&quot;--disable-all&quot;</span>, <span class="ruby-string">&quot;Disable all signature files.&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">disable_all</span>
+      <span class="ruby-identifier">exit</span>
+                      <span class="ruby-keyword">end</span>
+
+                      <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-l&quot;</span>, <span class="ruby-string">&quot;--list&quot;</span>, <span class="ruby-string">&quot;List all signature files.&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">list</span>
+      <span class="ruby-identifier">exit</span>
+                      <span class="ruby-keyword">end</span>
+
+                      <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-e&quot;</span>, <span class="ruby-string">&quot;--enable &lt;FILE_NAME&gt;&quot;</span>, <span class="ruby-string">&quot;Enable a unique file.&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enable_signature_file</span> <span class="ruby-identifier">e</span>
+                      <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-r&quot;</span>, <span class="ruby-string">&quot;--disable &lt;FILE_NAME&gt;&quot;</span>, <span class="ruby-string">&quot;Disable a unique file.&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">disable_signature_file</span> <span class="ruby-identifier">r</span>
+                      <span class="ruby-keyword">end</span>
+
+                      <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-h&quot;</span>, <span class="ruby-string">&quot;--help&quot;</span>, <span class="ruby-string">&quot;Print this help message&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span>
+                              <span class="ruby-identifier">puts</span> <span class="ruby-identifier">optparser</span>
+                              <span class="ruby-identifier">exit</span>
+                      <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">optparser</span>.<span class="ruby-identifier">parse!</span>
+
+      <span class="ruby-keyword">end</span></pre>
+            </div><!-- options_menu-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- options_menu-method -->
+
+      
+        <div id="print_banner-method" class="method-detail ">
+          <a name="method-i-print_banner"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_banner</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_banner-source">
+<pre>
+<span class="ruby-comment"># File uactl.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_banner</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;&gt; User-Agent Tester [signature_controller.rb]&quot;</span>
+  <span class="ruby-constant">CMDPrint</span>.<span class="ruby-identifier">print_version</span> <span class="ruby-node">&quot;version: #{VERSION}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- print_banner-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_banner-method -->
+
+      
+        <div id="run-method" class="method-detail ">
+          <a name="method-i-run"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="run-source">
+<pre>
+<span class="ruby-comment"># File uactl.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span>
+        <span class="ruby-keyword">begin</span>
+                <span class="ruby-identifier">options_menu</span>
+        <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>.<span class="ruby-identifier">capitalize</span>
+                <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
