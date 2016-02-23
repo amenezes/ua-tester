@@ -38,10 +38,10 @@ class HttpRequest
 	def uri(uri)
 		Faraday.use(FaradayMiddleware::FollowRedirects)
 		@conn = Faraday.new(:url => uri) do |faraday|
-			faraday.request  :url_encoded
+			faraday.request :url_encoded
 			#faraday.response :logger
 			faraday.use FaradayMiddleware::FollowRedirects, limit: 3
-			faraday.adapter  :typhoeus
+			faraday.adapter :typhoeus
 		end
 	end
 

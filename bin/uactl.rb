@@ -77,7 +77,7 @@ class UACtl
   def options_menu
     @options = {}
 		optparser = OptionParser.new do |opt|
-			opt.banner = print_banner
+      opt.banner = print_banner
 			opt.separator ""
 			opt.separator "OPTIONS:"
 
@@ -107,12 +107,11 @@ class UACtl
 			opt.on("-h", "--help", "Print this help message") do |h|
 				puts optparser
 				exit
-			end
-		end
+      end
+    end
 
     optparser.parse!
-
-	end
+  end
 
 	def run
 		begin
