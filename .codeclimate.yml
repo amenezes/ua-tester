@@ -6,7 +6,6 @@ ratings:
   - bin/**
   - lib/**
   - "**.rb"
-  - "**.go"
 exclude_paths:
 - config/**
 - doc/**/*
