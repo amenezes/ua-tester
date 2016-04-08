@@ -32,22 +32,17 @@ class UACtl
 
   def disable_all
     CMDPrint.print_info "disabled all signature files..."
-
     rename_signature_files ".yaml", ".txt"
   end
 
   def enable_all
     CMDPrint.print_info "enabled all signature files..."
-
     rename_signature_files ".txt", ".yaml"
-
   end
 
   def enable_signature_file file
     CMDPrint.print_info "All signature files now are enabled."
-
     test_file file, ".yaml"
-
     rename_signature_files(".txt",
       ".yaml",
       get_signature_files(
@@ -58,12 +53,11 @@ class UACtl
 
   def disable_signature_file file
     CMDPrint.print_info "All signature files now are disabled."
-
     test_file file, ".txt"
     rename_signature_files(".yaml",
       ".txt",
       get_signature_files(
-        "#{Dir.pwd}/signatures/#{file}*.{yaml,txt}"
+      "#{Dir.pwd}/signatures/#{file}*.{yaml,txt}"
       )
     )
   end
@@ -130,8 +124,8 @@ class UACtl
         File.rename(
           "signatures/#{File.basename(file)}",
           "signatures/#{File.basename(file,
-            "#{fbase_extension}")
-            .concat("#{fdest_extension}")}"
+          "#{fbase_extension}")
+          .concat("#{fdest_extension}")}"
         )
       end
     end

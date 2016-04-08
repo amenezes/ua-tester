@@ -37,7 +37,6 @@ class Scan
 			proxy_params = @utils.setting_proxy proxy
 			proxy_addr = proxy_params[0]
 			proxy_port = proxy_params[1]
-
 			@generic_request.proxy proxy_addr, proxy_port
 		end
 	end

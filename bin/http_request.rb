@@ -39,7 +39,6 @@ class HttpRequest
 		Faraday.use(FaradayMiddleware::FollowRedirects)
 		@conn = Faraday.new(:url => uri) do |faraday|
 			faraday.request :url_encoded
-			#faraday.response :logger
 			faraday.use FaradayMiddleware::FollowRedirects, limit: 3
 			faraday.adapter :typhoeus
 		end
@@ -60,9 +59,8 @@ class HttpRequest
 
 	def make_request(uri, ua_string)
 		begin
-
 			resp = @conn.get do |req|
-				req.url uri
+			  req.url uri
 				req.options.timeout = 5
 				req.options.open_timeout = 5
 				req.headers['User-Agent'] = ua_string
