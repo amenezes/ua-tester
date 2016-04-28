@@ -1,7 +1,7 @@
 ##
 # UA-Tester
 #
-# Copyright (C) 2015 - 2015 - BSecTeam
+# Copyright (C) 2015 - 2016 - BSecTeam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -32,16 +32,16 @@ class Scan
 		@files = @utils.load_signatures_files
 	end
 
-	def use_proxy(use=USE_PROXY, proxy)
-		if use != false
+	def use_proxy( use=USE_PROXY, proxy )
+		if use
 			proxy_params = @utils.setting_proxy proxy
-			proxy_addr = proxy_params[0]
-			proxy_port = proxy_params[1]
+			proxy_addr   = proxy_params[0]
+			proxy_port   = proxy_params[1]
 			@generic_request.proxy proxy_addr, proxy_port
 		end
 	end
 
-	def start_scan(url="#{BASE_URL}")
+	def start_scan( url="#{ BASE_URL }" )
 		begin
 			uri = @utils.normalize url
 			@generic_request.uri uri
@@ -52,7 +52,7 @@ class Scan
 				signature_file.each_key do |ua_class|
 					CMDPrint.print_info(ua_class)
 					signature_file[ua_class].each do |ua_value|
-						res = @generic_request.make_request(uri, ua_value)
+						res = @generic_request.make_request( uri, ua_value )
 					end
 				end
 			end

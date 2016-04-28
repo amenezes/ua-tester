@@ -1,7 +1,7 @@
 ##
 # UA-Tester
 #
-# Copyright (C) 2015 - 2015 - BSecTeam
+# Copyright (C) 2015 - 2016 - BSecTeam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,23 +19,23 @@
 
 module CMDPrint
 
-	def self.print_good(message)
-		puts "\033[00;1;32m[+]\033[0m [#{message}]"
+	def self.print_good( message )
+		puts "\033[00;1;32m[ + ] [ #{ message } ]\033[0m"
 	end
 
-	def self.print_error(message)
-		puts "\033[00;1;31m[-]\033[0m [#{message}]"
+	def self.print_error( message )
+		puts "\033[00;1;31m[ - ] [ #{ message } ]\033[0m"
 	end
 
-	def self.print_info(message)
-		puts "\033[00;1;34m[*]\033[0m [#{message}]"
+	def self.print_info( message )
+		puts "\033[00;1;34m[ * ] [ #{ message } ]\033[0m"
 	end
 
-	def self.print_debug(message)
-		puts "\033[00;1;31m[*] DEBUG: [#{message}]\033[0m"
+	def self.print_debug( message )
+		puts "\033[00;1;31m[ * ] [DEBUG] [ #{ message } ]\033[0m"
 	end
 
-	def self.print_version(message)
-		puts "\033[4;34m#{message}\033[0m"
+	def self.print_version( message )
+		puts "\033[4;34m#{ message }\033[0m"
 	end
 end

@@ -1,7 +1,7 @@
 ##
 # UA-Tester
 #
-# Copyright (C) 2015 - 2015 - BSecTeam
+# Copyright (C) 2015 - 2016 - BSecTeam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -24,20 +24,20 @@ class Utils
 	attr_accessor :page_result
 
 	def load_signatures_files
-		files = Dir.glob("#{Dir.pwd}/signatures/*.yaml")
+		Dir.glob( "#{Dir.pwd}/signatures/*.yaml" )
 	end
 
-	def normalize(url)
+	def normalize( url )
 		if url.start_with? "http://"
 		elsif url.start_with? "https://"
 		else
-			url = "http://#{url}"
+			url = "http://#{ url }"
 		end
-		return URI(url)
+		return URI( url )
 	end
 
-	def setting_proxy(params)
-		params.split(":")
+	def setting_proxy( params )
+		params.split( ":" )
 	end
 
 end
