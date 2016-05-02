@@ -72,70 +72,67 @@ class UACtl
 
   def options_menu
     @options = {}
-		optparser = OptionParser.new do |opt|
+    optparser = OptionParser.new do |opt|
       opt.banner = print_banner
-			opt.separator ""
-			opt.separator "OPTIONS:"
-
-			opt.on( "-a", "--enable-all", "Enable all signature files." ) do |a|
+      opt.separator ""
+      opt.separator "OPTIONS:"
+      
+      opt.on( "-a", "--enable-all", "Enable all signature files." ) do |a|
         self.enable_all
         exit
-			end
+      end
 
-			opt.on( "-d", "--disable-all", "Disable all signature files." ) do |d|
+      opt.on( "-d", "--disable-all", "Disable all signature files." ) do |d|
         self.disable_all
         exit
-			end
+      end
 
-			opt.on( "-l", "--list", "List all signature files." ) do |l|
+      opt.on( "-l", "--list", "List all signature files." ) do |l|
         self.list
         exit
-			end
+      end
 
-			opt.on( "-e", "--enable <FILE_NAME>", "Enable a unique file." ) do |e|
+      opt.on( "-e", "--enable <FILE_NAME>", "Enable a unique file." ) do |e|
         self.enable_signature_file e
-			end
+      end
 
       opt.on( "-r", "--disable <FILE_NAME>", "Disable a unique file." ) do |r|
         self.disable_signature_file r
-			end
-
-			opt.on( "-h", "--help", "Print this help message" ) do |h|
-				puts optparser
-				exit
       end
-    end
 
+      opt.on( "-h", "--help", "Print this help message" ) do |h|
+        puts optparser
+        exit
+      end
+      
+    end
     optparser.parse!
   end
 
-	def run
-		begin
-			options_menu
-		rescue => e
-			puts e.message.capitalize
-			exit 1
-		end
-	end
+  def run
+    begin
+      options_menu
+    rescue => e
+      puts e.message.capitalize
+      exit 1
+    end
+  end
 
   private
 
   def rename_signature_files( fbase_extension, fdest_extension, files=get_signature_files )
     files.each do |file|
       if (File.extname file).end_with?"#{fbase_extension}"
-        File.rename(
-          "signatures/#{ File.basename(file) }",
-          "signatures/#{ File.basename(file,
-          "#{fbase_extension}" )
-          .concat( "#{ fdest_extension }" ) }"
-        )
+        File.rename("signatures/#{ File.basename(file) }",
+                    "signatures/#{ File.basename(file,
+                    "#{fbase_extension}" )
+                    .concat( "#{ fdest_extension }" ) }"
+                    )
       end
     end
   end
 
-  def get_signature_files(
-    signature_directory = "#{ Dir.pwd }/signatures/*.{yaml,txt}"
-  )
+  def get_signature_files(signature_directory = "#{ Dir.pwd }/signatures/*.{yaml,txt}")
     Dir.glob( signature_directory )
   end
 
