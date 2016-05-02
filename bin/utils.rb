@@ -16,28 +16,27 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ##
-
 require 'uri'
 
 class Utils
 
-	attr_accessor :page_result
+  attr_accessor :page_result
+  
+  def load_signatures_files
+    Dir.glob( "#{Dir.pwd}/signatures/*.yaml" )
+  end
 
-	def load_signatures_files
-		Dir.glob( "#{Dir.pwd}/signatures/*.yaml" )
-	end
+  def normalize( url )
+    if url.start_with? "http://"
+      elsif url.start_with? "https://"
+      else
+        url = "http://#{ url }"
+      end
+      return URI( url )
+  end
 
-	def normalize( url )
-		if url.start_with? "http://"
-		elsif url.start_with? "https://"
-		else
-			url = "http://#{ url }"
-		end
-		return URI( url )
-	end
-
-	def setting_proxy( params )
-		params.split( ":" )
-	end
+  def setting_proxy( params )
+    params.split( ":" )
+  end
 
 end
