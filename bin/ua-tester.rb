@@ -38,24 +38,43 @@ class UATester
       opt.separator ""
       opt.separator "OPTIONS:"
       
-      opt.on( "-p PROXY_ADDR:PROXY_PORT", "--proxy PROXY_ADDR:PROXY_PORT", "Set a proxy to use. Default it's disable" ) do |p|
+      opt.on(
+        "-p PROXY_ADDR:PROXY_PORT",
+        "--proxy PROXY_ADDR:PROXY_PORT",
+        "Set a proxy to use. Default it's disable"
+      ) do |p|
         @options[:proxy] = p
         @scan.use_proxy( true, @options[:proxy] )
       end
 
-      opt.on( "-u TARGET", "--url TARGET", "URL target to scan. Default it's <localhost>" ) do |op|
+      opt.on(
+        "-u TARGET",
+        "--url TARGET",
+        "URL target to scan. Default it's <localhost>"
+      ) do |op|
         @options[:url] = op
         @scan.start_scan @options[:url]
       end
 
-      opt.on( "-o", "--output", "Set a <FILE> to output result scan" ) do |o|
+      opt.on(
+        "-o", "--output",
+        "Set a <FILE> to output result scan"
+      ) do |o|
       end
 
-      opt.on( "-b", "--browser", "Set a browser template for HTTP header, options are: [firefox, safari and chrome]" ) do |b|
+      opt.on(
+        "-b",
+        "--browser",
+        "Set a browser template for HTTP header, options are: [firefox, safari and chrome]"
+      ) do |b|
         @options[:browser] = b
       end
 
-      opt.on( "-h", "--help", "Print this help message" ) do |h|
+      opt.on(
+        "-h",
+        "--help",
+        "Print this help message"
+      ) do |h|
         puts optparser
         exit
       end
