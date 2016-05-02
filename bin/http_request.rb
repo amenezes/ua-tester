@@ -58,7 +58,7 @@ class HttpRequest
   def make_request( uri, ua_string )
     begin
       resp = @conn.get do |req|
-        req.url 									  uri
+        req.url uri
         req.options.timeout = 5
         req.options.open_timeout  = 5
         req.headers['User-Agent'] = ua_string
