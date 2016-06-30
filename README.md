@@ -2,17 +2,12 @@
 
 
 <b>Dependencies:</b>
- - Ruby: http://www.ruby-lang.org
-  - minimum version 1.9.3
- - OptionParser: https://rubygems.org/gems/OptionParser
- - RequireRelative: http://www.steveklabnik.com/require_relative/
- - Faraday: https://github.com/lostisland/faraday
- - Typhoeus: https://github.com/typhoeus/typhoeus
- - Faraday_middleware: https://github.com/lostisland/faraday_middleware
- - Bundler: http://bundler.io
+ - Ruby 1.9.3 or above
+ - Bundler
+ 
+<b>Installation:</b>  
 
-<b>Installation:</b>
-- <i>bundle install</i>
+<code>sudo gem install bundler && bundle install</code>
 
 <b>Usage:</b>
 <pre>
