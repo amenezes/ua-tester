@@ -1,4 +1,4 @@
-# ua-tester <a href="https://codeclimate.com/github/amenezes/ua-tester"><img src="https://codeclimate.com/github/amenezes/ua-tester/badges/gpa.svg" /></a>
+# ua-tester <a href="https://codeclimate.com/github/amenezes/ua-tester"><img src="https://codeclimate.com/github/amenezes/ua-tester/badges/gpa.svg" /></a> [![Build Status](https://travis-ci.org/amenezes/ua-tester.svg?branch=master)](https://travis-ci.org/amenezes/ua-tester)
 
 <b>Dependencies:</b>
  - Ruby: http://www.ruby-lang.org
