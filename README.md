@@ -1,4 +1,5 @@
-# ua-tester <a href="https://codeclimate.com/github/amenezes/ua-tester"><img src="https://codeclimate.com/github/amenezes/ua-tester/badges/gpa.svg" /></a> [![Build Status](https://travis-ci.org/amenezes/ua-tester.svg?branch=master)](https://travis-ci.org/amenezes/ua-tester)
+# ua-tester <a href="https://codeclimate.com/github/amenezes/ua-tester"><img src="https://codeclimate.com/github/amenezes/ua-tester/badges/gpa.svg" /></a> [![Build Status](https://travis-ci.org/amenezes/ua-tester.svg?branch=master)](https://travis-ci.org/amenezes/ua-tester) [![Dependency Status](https://gemnasium.com/badges/github.com/amenezes/ua-tester.svg)](https://gemnasium.com/github.com/amenezes/ua-tester)
+
 
 <b>Dependencies:</b>
  - Ruby: http://www.ruby-lang.org
