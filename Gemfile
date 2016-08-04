@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'OptionParser', '~>0.5.1'
 gem 'require_relative', '~>1.0.3'
-gem 'typhoeus', '~>1.0.2'
+gem 'typhoeus', '~>1.1.0'
 gem 'faraday_middleware', '~>0.10.0'
 gem 'faraday', '~>0.9.2'
 
