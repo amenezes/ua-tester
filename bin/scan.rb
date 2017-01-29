@@ -1,8 +1,4 @@
 #!/usr/bin/ruby
-##
-# UA-Tester
-# BSecTeam (C) 2015 - 2016
-##
 require_relative 'utils'
 require_relative 'cmd_print'
 require_relative 'http_request'
@@ -18,7 +14,7 @@ class Scan
     @files = @utils.load_signatures_files
   end
 
-  def use_proxy( use=USE_PROXY, proxy )
+  def use_proxy(use=USE_PROXY, proxy)
     if use
       proxy_params = @utils.setting_proxy proxy
       proxy_addr   = proxy_params[0]
@@ -27,7 +23,7 @@ class Scan
     end
   end
 
-  def start_scan( url="#{ BASE_URL }" )
+  def start_scan(url="#{BASE_URL}")
     begin
       uri = @utils.normalize url
       @generic_request.uri uri

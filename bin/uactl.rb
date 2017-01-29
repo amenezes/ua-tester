@@ -1,14 +1,10 @@
 #!/usr/bin/ruby
-##
-# UA-Tester
-# BSecTeam (C) 2015 - 2016
-##
 require 'optparse'
 require_relative 'cmd_print'
 
 class UACtl
 
-  VERSION="0.2.0"
+  VERSION="0.3.0""
 
   def list
     files = get_signature_files

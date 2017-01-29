@@ -1,8 +1,4 @@
 #!/usr/bin/ruby
-##
-# UA-Tester
-# BSecTeam (C) 2015 - 2016
-##
 require 'rubygems'
 require 'yaml'
 require 'typhoeus/adapters/faraday'

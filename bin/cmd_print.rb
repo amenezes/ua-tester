@@ -1,8 +1,4 @@
 #!/usr/bin/ruby
-##
-# UA-Tester
-# BSecTeam (C) 2015 - 2016
-##
 module CMDPrint
 
   def self.print_good(message)

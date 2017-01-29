@@ -1,8 +1,4 @@
 #!/usr/bin/ruby
-##
-# UA-Tester
-# BSecTeam (C) 2015 - 2016
-##
 require 'uri'
 
 class Utils
@@ -22,8 +18,8 @@ class Utils
       return URI(url)
   end
 
-  def setting_proxy( params )
-    params.split( ":" )
+  def setting_proxy(params)
+    params.split(":")
   end
 
 end

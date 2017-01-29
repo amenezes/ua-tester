@@ -1,15 +1,11 @@
 #!/usr/bin/ruby
-##
-# UA-Tester
-# BSecTeam (C) 2015 - 2016
-##
 require 'optparse'
 require_relative 'scan'
 require_relative 'cmd_print'
 
 class UATester
 
-  VERSION="0.9.0"
+  VERSION="0.3.0"
 
   def initialize
     @scan = Scan.new
@@ -71,7 +67,7 @@ class UATester
     end
     optparser.parse!
     mandatory = [:url]
-    missing = mandatory.select{ |param| @options[param].nil? }
+    missing = mandatory.select{|param| @options[param].nil?}
     unless missing.empty?
       puts optparser
       exit
