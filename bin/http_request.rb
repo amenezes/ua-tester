@@ -9,7 +9,6 @@ require_relative 'cmd_print'
 class HttpRequest
 
   DEFAULT_BROWSER = "firefox"
-#  HTTP_HEADER_CONFIG_FILE = uti
   HTTP_HEADER_CONFIG_FILE = "#{Dir.pwd}/config/http-header-template.yaml"
 
   def initialize(browser_template=DEFAULT_BROWSER)
@@ -56,7 +55,7 @@ class HttpRequest
       rescue Faraday::TimeoutError
         CMDPrint.print_error("#{ua_string}")
       rescue Faraday::ConnectionFailed
-        CMDPrint.print_info("couldn't resolve host name.")
+        CMDPrint.print_info("couldn't resolve hostname.")
         exit
       rescue => e
         CMDPrint.print_error(e)

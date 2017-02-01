@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 require 'uri'
 
 class Utils
@@ -10,12 +10,10 @@ class Utils
   end
 
   def normalize(url)
-    if url.start_with?("http://")
-      elsif url.start_with?("https://")
-      else
-        url = "http://#{url}"
-      end
-      return URI(url)
+    unless (url.start_with?("http://") || url.start_with?("https://"))
+      url = "http://#{url}"
+    end
+    return URI(url)
   end
 
   def setting_proxy(params)
