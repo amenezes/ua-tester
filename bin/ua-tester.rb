@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 require 'optparse'
 require_relative 'scan'
 require_relative 'cmd_print'
@@ -13,16 +13,16 @@ class UATester
 
   def print_banner
     puts "> User-Agent Tester [ua-tester.rb]"
-    CMDPrint.print_version "version: #{ VERSION }"
-    puts ""
+    CMDPrint.print_version("version: #{VERSION}")
+    puts("")
   end
 
   def options_menu
     @options = {}
     optparser = OptionParser.new do |opt|
       opt.banner = print_banner
-      opt.separator ""
-      opt.separator "OPTIONS:"
+      opt.separator("")
+      opt.separator("OPTIONS:")
 
       opt.on(
         "-p PROXY_ADDR:PROXY_PORT",
@@ -30,7 +30,7 @@ class UATester
         "Set a proxy to use. Default it's disable"
       ) do |p|
         @options[:proxy] = p
-        @scan.use_proxy( true, @options[:proxy] )
+        @scan.use_proxy(true, @options[:proxy])
       end
 
       opt.on(
@@ -61,7 +61,7 @@ class UATester
         "--help",
         "Print this help message"
       ) do |h|
-        puts optparser
+        puts(optparser)
         exit
       end
     end
@@ -69,7 +69,7 @@ class UATester
     mandatory = [:url]
     missing = mandatory.select{|param| @options[param].nil?}
     unless missing.empty?
-      puts optparser
+      puts(optparser)
       exit
     end
   end
@@ -78,7 +78,7 @@ class UATester
     begin
       options_menu
     rescue => e
-      puts e.message.capitalize
+      puts(e.message.capitalize)
       exit 1
      end
   end

@@ -1,10 +1,10 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 require 'optparse'
 require_relative 'cmd_print'
 
 class UACtl
 
-  VERSION="0.3.0""
+  VERSION="0.3.0"
 
   def list
     files = get_signature_files
@@ -26,41 +26,27 @@ class UACtl
   end
 
   def enable_signature_file(file)
-    CMDPrint.print_info("All signature files now are enabled.")
-    test_file(file, ".yaml")
-    rename_signature_files(
-      ".txt",
-      ".yaml",
-      get_signature_files(
-        "#{Dir.pwd}/signatures/#{file}*.{yaml,txt}"
-      )
-    )
+    CMDPrint.print_info("<#{file}> signature enabled.")
+    rename_signature_file(file, ".txt", ".yaml")
   end
 
   def disable_signature_file(file)
-    CMDPrint.print_info("All signature files now are disabled.")
-    test_file(file, ".txt")
-    rename_signature_files(
-      ".yaml",
-      ".txt",
-      get_signature_files(
-        "#{Dir.pwd}/signatures/#{ file }*.{yaml,txt}"
-      )
-    )
+    CMDPrint.print_info("<#{file}> signature disabled.")
+    rename_signature_file(file, ".yaml", ".txt")
   end
 
   def print_banner
-    puts "> User-Agent Tester [signature_controller.rb]"
+    puts("> User-Agent Tester [signature_controller.rb]")
     CMDPrint.print_version("version: #{VERSION}")
-    puts ""
+    puts("")
   end
 
   def options_menu
     @options = {}
     optparser = OptionParser.new do |opt|
       opt.banner = print_banner
-      opt.separator ""
-      opt.separator "OPTIONS:"
+      opt.separator("")
+      opt.separator("OPTIONS:")
 
       opt.on(
         "-a",
@@ -94,7 +80,7 @@ class UACtl
         "--enable <FILE_NAME>",
         "Enable a unique file."
       ) do |e|
-        self.enable_signature_file e
+        self.enable_signature_file(e)
       end
 
       opt.on(
@@ -102,7 +88,7 @@ class UACtl
         "--disable <FILE_NAME>",
         "Disable a unique file."
       ) do |r|
-        self.disable_signature_file r
+        self.disable_signature_file(r)
       end
 
       opt.on(
@@ -110,7 +96,7 @@ class UACtl
         "--help",
         "Print this help message"
       ) do |h|
-        puts optparser
+        puts(optparser)
         exit
       end
     end
@@ -121,7 +107,7 @@ class UACtl
     begin
       options_menu
     rescue => e
-      puts e.message.capitalize
+      puts(e.message.capitalize)
       exit 1
     end
   end
@@ -145,6 +131,17 @@ class UACtl
     end
   end
 
+  def rename_signature_file(file, old_extension, new_extension)
+    test_file(file, new_extension)
+    rename_signature_files(
+      old_extension,
+      new_extension,
+      get_signature_files(
+        "#{Dir.pwd}/signatures/#{ file }*.{yaml,txt}"
+      )
+    )
+  end
+
   def get_signature_files(
     signature_directory = "#{Dir.pwd}/signatures/*.{yaml,txt}"
   )
@@ -155,7 +152,7 @@ class UACtl
     if ((File.extname file) == extension)
       CMDPrint.print_info("seems that are nothing to do with signature file set <#{file}>.")
       exit
-    elsif File.exist?File.expand_path file + extension, "signatures"
+    elsif File.exist?File.expand_path(file + extension, "signatures")
       CMDPrint.print_info("signature specify already enabled or disabled!")
       exit
     end

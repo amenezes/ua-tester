@@ -23,7 +23,7 @@ OPTIONS:
 -h, --help &#9;&#9;&#9;&#9; Print this help message.
 ````
 
-Module to Assist Management of Signature Files \<to newbie :P\>:
+Module to Assist Management of Signature Files:
 ````bash
 Usage: uactl [options]
 
