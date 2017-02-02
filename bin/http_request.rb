@@ -8,8 +8,13 @@ require_relative 'cmd_print'
 
 class HttpRequest
 
+  attr_accessor :proxy_addr
   DEFAULT_BROWSER = "firefox"
   HTTP_HEADER_CONFIG_FILE = "#{Dir.pwd}/config/http-header-template.yaml"
+
+  def proxy_addr
+    @proxy_addr || ''
+  end
 
   def initialize(browser_template=DEFAULT_BROWSER)
     @http_header_fields = config_http_header(browser_template)
@@ -21,10 +26,8 @@ class HttpRequest
         faraday.request(:url_encoded)
         faraday.use(FaradayMiddleware::FollowRedirects, limit: 3)
         faraday.adapter(:typhoeus)
+        faraday.proxy(@proxy_addr)
       end
-  end
-
-  def proxy(addr, port)
   end
 
   def config_http_header(browser_template)
@@ -47,18 +50,18 @@ class HttpRequest
 
       case resp.status
       when 200
-        CMDPrint.print_good(ua_string)
+        CMDPrint.good(ua_string)
       when 400..505
-        CMDPrint.print_error(ua_string)
+        CMDPrint.error(ua_string)
       end
 
       rescue Faraday::TimeoutError
-        CMDPrint.print_error("#{ua_string}")
+        CMDPrint.error("#{ua_string}")
       rescue Faraday::ConnectionFailed
-        CMDPrint.print_info("couldn't resolve hostname.")
+        CMDPrint.info("couldn't resolve hostname.")
         exit
       rescue => e
-        CMDPrint.print_error(e)
+        CMDPrint.error(e)
       end
   end
 

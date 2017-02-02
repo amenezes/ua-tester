@@ -13,7 +13,7 @@ class UATester
 
   def print_banner
     puts "> User-Agent Tester [ua-tester.rb]"
-    CMDPrint.print_version("version: #{VERSION}")
+    CMDPrint.version("version: #{VERSION}")
     puts("")
   end
 
@@ -30,7 +30,7 @@ class UATester
         "Set a proxy to use. Default it's disable"
       ) do |p|
         @options[:proxy] = p
-        @scan.use_proxy(true, @options[:proxy])
+        @scan.proxy = @options[:proxy]
       end
 
       opt.on(
@@ -39,7 +39,7 @@ class UATester
         "URL target to scan. Default it's <localhost>"
       ) do |op|
         @options[:url] = op
-        @scan.start_scan @options[:url]
+        @scan.start_scan(@options[:url])
       end
 
       opt.on(

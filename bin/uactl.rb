@@ -11,40 +11,40 @@ class UACtl
 
     CMDPrint.print_info("valid files to <ua-tester.rb> are")
     files.each do |file|
-      CMDPrint.print_good(File.basename(file))
+      CMDPrint.good(File.basename(file))
     end
   end
 
   def disable_all
-    CMDPrint.print_info("disabled all signature files...")
+    CMDPrint.info("disabled all signature files...")
     rename_signature_files(".yaml", ".txt")
   end
 
   def enable_all
-    CMDPrint.print_info("enabled all signature files...")
+    CMDPrint.info("enabled all signature files...")
     rename_signature_files(".txt", ".yaml")
   end
 
   def enable_signature_file(file)
-    CMDPrint.print_info("<#{file}> signature enabled.")
+    CMDPrint.info("<#{file}> signature enabled.")
     rename_signature_file(file, ".txt", ".yaml")
   end
 
   def disable_signature_file(file)
-    CMDPrint.print_info("<#{file}> signature disabled.")
+    CMDPrint.info("<#{file}> signature disabled.")
     rename_signature_file(file, ".yaml", ".txt")
   end
 
   def print_banner
     puts("> User-Agent Tester [signature_controller.rb]")
-    CMDPrint.print_version("version: #{VERSION}")
+    CMDPrint.version("version: #{VERSION}")
     puts("")
   end
 
   def options_menu
     @options = {}
     optparser = OptionParser.new do |opt|
-      opt.banner = print_banner
+      opt.banner = banner
       opt.separator("")
       opt.separator("OPTIONS:")
 
@@ -150,10 +150,10 @@ class UACtl
 
   def test_file(file, extension)
     if ((File.extname file) == extension)
-      CMDPrint.print_info("seems that are nothing to do with signature file set <#{file}>.")
+      CMDPrint.info("seems that are nothing to do with signature file set <#{file}>.")
       exit
     elsif File.exist?File.expand_path(file + extension, "signatures")
-      CMDPrint.print_info("signature specify already enabled or disabled!")
+      CMDPrint.info("signature specify already enabled or disabled!")
       exit
     end
   end
