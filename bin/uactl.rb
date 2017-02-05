@@ -36,9 +36,9 @@ class UACtl
   end
 
   def print_banner
-    puts("> User-Agent Tester [signature_controller.rb]")
+    CMDPrint.normal("> User-Agent Tester [signature_controller.rb]")
     CMDPrint.version("version: #{VERSION}")
-    puts("")
+    CMDPrint.blank
   end
 
   def options_menu
@@ -96,7 +96,7 @@ class UACtl
         "--help",
         "Print this help message"
       ) do |h|
-        puts(optparser)
+        CMDPrint.normal(optparser)
         exit
       end
     end
@@ -107,7 +107,7 @@ class UACtl
     begin
       options_menu
     rescue => e
-      puts(e.message.capitalize)
+      CMDPrint.normal(e.message.capitalize)
       exit 1
     end
   end

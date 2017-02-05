@@ -28,34 +28,32 @@ class Scan
       prepare_request(uri, proxy)
       signatures = load_signature
       signatures.each do |sig_file|
-
-        sig_file.each_key do |ua_class|
-          CMDPrint.info ua_class
-          sig_file[ua_class].each do |ua_value|
-            @http_headers['User-Agent'] = ua_value
-            request = make_parallel_request(@uri, @proxy, @http_headers)
-            @requests_controll[ua_value] = request
-            @hydra.queue(request)
-          end
-          @hydra.run
-          @requests_controll.each do |k,v|
-            code = v.response.response_code
-            case code
-            when 200
-              CMDPrint.good k
-            else
-              CMDPrint.error k
-            end
-          end
-          @requests_controll = {}
-        end
+        prepare_category(sig_file)
       end
-    puts ""
+    CMDPrint.blank
     rescue Interrupt
       CMDPrint.info("Ctrl + C")
     rescue
       puts $!, $@
       CMDPrint.info("Fatal Error!")
+    end
+  end
+
+  def prepare_category(sig_file)
+    sig_file.each_key do |ua_class|
+      CMDPrint.info(ua_class)
+      request_inside(sig_file, ua_class)
+      @hydra.run
+      print_output
+    end
+  end
+
+  def request_inside(sig_file, ua_class)
+    sig_file[ua_class].each do |ua_value|
+      @http_headers['User-Agent'] = ua_value
+      request = make_request(@uri, @proxy, @http_headers)
+      @requests_controll[ua_value] = request
+      @hydra.queue(request)
     end
   end
 
@@ -69,6 +67,19 @@ class Scan
   end
 
   private
+
+  def print_output()
+    @requests_controll.each do |user_agent , request|
+      response_code = request.response.response_code
+      case response_code
+      when 200
+        CMDPrint.good(user_agent)
+      else
+        CMDPrint.error(user_agent)
+      end
+    end
+    @requests_controll = {}
+  end
 
   def prepare_request(uri, proxy)
     unless proxy.empty?
@@ -93,7 +104,7 @@ class Scan
     return http_headers
   end
 
-  def make_parallel_request(uri, proxy, custom_headers={})
+  def make_request(uri, proxy, custom_headers={})
     request = Typhoeus::Request.new(
         uri,
         followlocation: true,

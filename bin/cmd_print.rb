@@ -21,4 +21,12 @@ module CMDPrint
     puts("\033[4;34m#{message}\033[0m")
   end
 
+  def self.blank
+    puts("")
+  end
+
+  def self.normal(message)
+    puts("#{message}")
+  end
+
 end
