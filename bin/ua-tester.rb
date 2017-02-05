@@ -39,7 +39,8 @@ class UATester
         "URL target to scan. Default it's <localhost>"
       ) do |op|
         @options[:url] = op
-        @scan.start_scan(@options[:url])
+        @scan.uri = @options[:url]
+        @scan.start_scan
       end
 
       opt.on(

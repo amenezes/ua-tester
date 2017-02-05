@@ -9,7 +9,7 @@ class UACtl
   def list
     files = get_signature_files
 
-    CMDPrint.print_info("valid files to <ua-tester.rb> are")
+    CMDPrint.info("valid files to <ua-tester.rb> are")
     files.each do |file|
       CMDPrint.good(File.basename(file))
     end
@@ -44,7 +44,7 @@ class UACtl
   def options_menu
     @options = {}
     optparser = OptionParser.new do |opt|
-      opt.banner = banner
+      opt.banner = print_banner
       opt.separator("")
       opt.separator("OPTIONS:")
 

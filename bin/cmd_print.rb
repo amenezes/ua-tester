@@ -2,11 +2,11 @@
 module CMDPrint
 
   def self.good(message)
-    puts("\033[00;1;32m[+] [ #{message} ]\033[0m")
+    puts("\033[00;1;32m[+]\033[0m [ #{message} ]")
   end
 
   def self.error(message)
-    puts("\033[00;1;31m[-] [ #{message} ]\033[0m")
+    puts("\033[00;1;31m[-]\033[0m [ #{message} ]")
   end
 
   def self.info(message)
