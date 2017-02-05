@@ -8,6 +8,7 @@ class Scan
 
   attr_accessor :proxy
   attr_accessor :uri
+  attr_accessor :browser
 
   def initialize
     @http_headers = config_default_headers
@@ -21,6 +22,10 @@ class Scan
 
   def uri
     @uri || 'localhost'
+  end
+
+  def browser
+    @browser || 'firefox'
   end
 
   def start_scan
@@ -38,6 +43,8 @@ class Scan
       CMDPrint.info("Fatal Error!")
     end
   end
+
+  private
 
   def prepare_category(sig_file)
     sig_file.each_key do |ua_class|
@@ -66,8 +73,6 @@ class Scan
     return signatures
   end
 
-  private
-
   def print_output()
     @requests_controll.each do |user_agent , request|
       response_code = request.response.response_code
@@ -95,7 +100,7 @@ class Scan
     return URI(url)
   end
 
-  def config_default_headers(browser_template='firefox')
+  def config_default_headers(browser_template='safari')
     http_headers = {}
     http_fields = YAML.load_file("#{Dir.pwd}/config/http-header-template.yaml")
     http_fields[browser_template].each do |key,value|

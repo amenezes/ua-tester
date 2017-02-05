@@ -28,8 +28,8 @@ class UATester
         "-p PROXY_ADDR:PROXY_PORT",
         "--proxy PROXY_ADDR:PROXY_PORT",
         "Set a proxy to use. Default it's disable"
-      ) do |p|
-        @options[:proxy] = p
+      ) do |proxy_address|
+        @options[:proxy] = proxy_address
         @scan.proxy = @options[:proxy]
       end
 
@@ -37,8 +37,8 @@ class UATester
         "-u TARGET",
         "--url TARGET",
         "URL target to scan. Default it's <localhost>"
-      ) do |op|
-        @options[:url] = op
+      ) do |target|
+        @options[:url] = target
         @scan.uri = @options[:url]
         @scan.start_scan
       end
@@ -53,8 +53,9 @@ class UATester
         "-b",
         "--browser",
         "Set a browser template for HTTP header, options are: [firefox, safari and chrome]"
-      ) do |b|
-        @options[:browser] = b
+      ) do |browser_template|
+        @options[:browser] = browser_template
+        @scan.browser = @options[:browser]
       end
 
       opt.on(
