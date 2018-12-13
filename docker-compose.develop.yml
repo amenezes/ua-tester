@@ -1,0 +1,7 @@
+version: '3'
+services:
+  ua-tester:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ua-tester

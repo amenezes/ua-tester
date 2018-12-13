@@ -1,0 +1,5 @@
+version: '3'
+services:
+  ua-tester:
+    image: amenezes/ua-tester
+    container_name: ua-tester

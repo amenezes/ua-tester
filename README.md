@@ -1,5 +1,7 @@
-# ua-tester <a href="https://codeclimate.com/github/amenezes/ua-tester"><img src="https://codeclimate.com/github/amenezes/ua-tester/badges/gpa.svg" /></a> [![Build Status](https://travis-ci.org/amenezes/ua-tester.svg?branch=master)](https://travis-ci.org/amenezes/ua-tester) [![Dependency Status](https://gemnasium.com/badges/github.com/amenezes/ua-tester.svg)](https://gemnasium.com/github.com/amenezes/ua-tester)
+<a href="https://codeclimate.com/github/amenezes/ua-tester"><img src="https://codeclimate.com/github/amenezes/ua-tester/badges/gpa.svg" /></a>
+[![Build Status](https://travis-ci.org/amenezes/ua-tester.svg?branch=master)](https://travis-ci.org/amenezes/ua-tester)
 
+# ua-tester
 
 #### Dependencies:
  - Ruby 1.9.3 or above
@@ -38,14 +40,23 @@ OPTIONS:
     -a, --enable-all                 Enable all signature files.
     -d, --disable-all                Disable all signature files.
     -l, --list                       List all signature files.
-    -e, --enable <FILE_NAME>         Enable a unique file.
-    -r, --disable <FILE_NAME>        Disable a unique file.
+    -e, --enable <FILE_NAME>         Enable a unique file. # without the file extension
+    -r, --disable <FILE_NAME>        Disable a unique file. # without the file extension
     -h, --help                       Print this help message
 ````
 
-An alternative way is to simply rename the file extension for '.yaml', for example:
+An alternative way is to simply rename the file extension for `.yaml`, for example:
 ````bash
 $ mv signature/cms_joomla.txt signature/cms_joomla.yaml
+````
+#### Docker:
+````bash
+docker run --rm --name ua-tester amenezes/ua-tester ua-tester -u https://github.com
+````
+
+#### docker-compose:
+````bash
+docker-compose run --rm ua-tester ua-tester -u https://github.com
 ````
 
 #### Contact:

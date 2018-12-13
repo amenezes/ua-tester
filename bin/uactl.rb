@@ -4,14 +4,18 @@ require_relative 'cmd_print'
 
 class UACtl
 
-  VERSION="0.3.0"
+  VERSION="0.3.1"
 
   def list
     files = get_signature_files
 
     CMDPrint.info("valid files to <ua-tester.rb> are")
     files.each do |file|
-      CMDPrint.good(File.basename(file))
+      if File.basename(file).end_with? "yaml"
+        CMDPrint.good(File.basename(file))
+      else
+        CMDPrint.error(File.basename(file))
+      end
     end
   end
 

@@ -1,14 +1,50 @@
 language: ruby
+services:
+  - docker
 rvm:
   - 1.9.3
-  - 2.0.0
-  - 2.1.0
-  - 2.1.1
-  - 2.1.2
-  - 2.1.3
-  - 2.1.4
-  - 2.1.5
-  - 2.2.0
-  - 2.2.1
-  - 2.2.2
-script: bundle exec rspec
+  - 2.4.5
+  - 2.5.3
+dist: xenial
+
+before_script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+stages:
+  - compile
+  - test
+  - build
+
+jobs:
+  include:
+    - stage: "compile"
+      name: "build project"
+      before_script:
+        - sudo apt-get update
+        - sudo apt-get install -y ruby-dev build-essential unzip zlib1g-dev patch
+      script:
+        - bundle install
+    - stage: "test"
+      name: "tests"
+      script:
+        - bundle exec rspec
+    - stage: "build"
+      name: "docker build master"
+      env: IMAGE_TAG=stable
+      script:
+        - docker image build -t amenezes/$IMAGE_NAME:$IMAGE_TAG .
+        - docker image tag amenezes/$IMAGE_NAME:$IMAGE_TAG amenezes/$IMAGE_NAME
+        - docker image push amenezes/$IMAGE_NAME:$IMAGE_TAG
+        - docker image push amenezes/$IMAGE_NAME
+      if: branch = master
+    - stage: "build"
+      name: "docker build develop"
+      env: IMAGE_TAG=unstable
+      script:
+        - docker image build -t amenezes/$IMAGE_NAME:$IMAGE_TAG .
+        - docker image push amenezes/$IMAGE_NAME:$IMAGE_TAG
+      if: branch != master
+
+env:
+  global:
+    - IMAGE_NAME=ua-tester

@@ -1,0 +1,11 @@
+doc/**
+images/**
+ua-tester.rb
+uactl.rb
+.codeclimate.yml
+.gitattributes
+.gitignore
+.travis.yml
+docker-compose*
+LICENSE
+*.md
