@@ -17,7 +17,7 @@ jobs:
       name: "build project"
       before_script:
         - sudo apt-get update
-        - sudo apt-get install -y ruby-dev build-essential unzip zlib1g-dev patch
+        - sudo apt-get install -y ruby-dev build-essential unzip zlib1g-dev patch ruby-typhoeus
       script:
         - bundle install
         - ruby uactl.rb -l
