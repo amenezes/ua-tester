@@ -17,7 +17,7 @@ jobs:
       name: "build project"
       before_script:
         - sudo apt-get update
-        - sudo apt-get install -y unzip build-essential ruby-dev zlib1g-dev patch ruby-curb ruby-ethon ruby-typhoeus
+        - sudo apt-get install -y unzip build-essential ruby-dev zlib1g-dev patch libcurl3 libcurl4-openssl-dev
       script:
         - bundle install
         - ruby uactl.rb -l
