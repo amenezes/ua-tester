@@ -20,6 +20,8 @@ jobs:
         - sudo apt-get install -y ruby-dev build-essential unzip zlib1g-dev patch
       script:
         - bundle install
+        - ruby uactl.rb -l
+        - ruby ua-tester.rb --help
     - stage: "test"
       name: "tests"
       script:
