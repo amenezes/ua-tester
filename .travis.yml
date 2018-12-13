@@ -2,7 +2,6 @@ language: ruby
 services:
   - docker
 rvm:
-  - 1.9.3
   - 2.4.5
   - 2.5.3
 dist: xenial
